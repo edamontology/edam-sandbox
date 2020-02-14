@@ -32,9 +32,9 @@ The problem detected by the query and its remedy are documented in the [docs]() 
 # Queries
 Query                    | Level | Docs | File | Issue
 -----                    | ----- | ---- | ---- | -----
-Dummy test SPARQL query  | INFO | - | [test_sparql.sparql](queries/test_sparql.sparql) | [1](https://github.com/edamontology/edamverify/issues/1)
-Dummy test SHACL query   | INFO | - | [test_shacl.shacl](queries/test_shacl.shacl)     | [2](https://github.com/edamontology/edamverify/issues/2)
-Misuse of properties intended for deprecated concepts only. | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/annotationDeprecationMisuse.md) | [annotationDeprecationMisuse.sparql](queries/annotationDeprecationMisuse.sparql)     | [2](https://github.com/edamontology/edamxpathvalidator/issues/2)
+Dummy test SPARQL query  | INFO | - | [1](https://github.com/edamontology/edamverify/issues/1) | [test_sparql.sparql](queries/test_sparql.sparql)
+Dummy test SHACL query   | INFO | - | [2](https://github.com/edamontology/edamverify/issues/2) | [test_shacl.shacl](queries/test_shacl.shacl)
+Misuse of properties intended for deprecated concepts only. | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/annotationDeprecationMisuse.md) | [2](https://github.com/edamontology/edamxpathvalidator/issues/2) | [annotationDeprecationMisuse.sparql](queries/annotationDeprecationMisuse.sparql)
 
 
 # General queries (from [ROBOT report](http://robot.obolibrary.org/report))
