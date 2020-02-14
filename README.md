@@ -25,17 +25,19 @@ Each query has a logging level (based on [ROBOT report](http://robot.obolibrary.
 * **WARN**: Should be fixed as soon as possible. These will not cause problems for all users, but may not be what they expect. For example, a class that is inferred to be equivalent to another named class.
 * **INFO**: Should be fixed if possible. These are for consistency and cleanliness, such as definitions that do not start with an uppercase character.
 
+The problem detected by the query and its remedy are documented in the [docs]() folder.
 
 
 
 # Queries
-Query              | Description              | Level | File                                             | Issue
------              | ------------------------ | ----- | ------------------------------------------------ | -----
-test_sparql        | Dummy test SPARQL query  | INFO  | [test_sparql.sparql](queries/test_sparql.sparql) | [1](https://github.com/edamontology/edamverify/issues/1)
-test_shacl         | Dummy test SHACL query   | INFO  | [test_shacl.shacl](queries/test_shacl.shacl)     | [2](https://github.com/edamontology/edamverify/issues/2)
+Query                         | Description              | Docs | Level | File                                             | Issue
+-----                         | ------------------------ | ---- | ----- | ------------------------------------------------ | -----
+test_sparql                   | Dummy test SPARQL query  | [docs]() | INFO  | [test_sparql.sparql](queries/test_sparql.sparql) | [1](https://github.com/edamontology/edamverify/issues/1)
+test_shacl                    | Dummy test SHACL query   | [docs]() | INFO  | [test_shacl.shacl](queries/test_shacl.shacl)     | [2](https://github.com/edamontology/edamverify/issues/2)
+annotationDeprecationMisuse   
 
 
-# Queries from ROBOT report
+# General queries (from [ROBOT report](http://robot.obolibrary.org/report))
 Query                         | Description | Level
 ----------------------------- | ----------- | -----
 annotation whitespace	      | [link](http://robot.obolibrary.org/report_queries/annotation_whitespace)    | WARN
@@ -71,6 +73,7 @@ File                            | Description
 ----                            | -----------
 src/edamverify.py               | edamverify utility
 queries/                        | Queries in SPARQL query language and SHACL constraint language format
+docs/                           | Query documentation (the problem detected by the query and its remedy)
 reports/                        | Reports from running edamverify on EDAM_dev.owl
 README.md		        | This file
 
