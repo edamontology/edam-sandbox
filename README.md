@@ -1,6 +1,6 @@
-** UNDER CONSTRUCTION - edamverify is being built and the docs here describe the intended state, not it's current state!**
+**UNDER CONSTRUCTION - edamverify is being built and the docs here describe the intended state, not it's current state!**
 
-# edamverify - EDAM Verification Utility
+# EDAM Verification Utility : edamverify
 
 **edamverify** is a utility for verification of the EDAM ontology.  It implements a set of quality control (QC) checks based upon:
 
@@ -23,7 +23,7 @@ EDAM QC consists of:
 
 # Queries
 Query              | Description              | Level | File
------              | ------------------------ | 
+-----              | ------------------------ | ----- | ----
 test_sparql        | Dummy test SPARQL query  | INFO  | [test_sparql.sparql](queries/test_sparql.sparql)
 test_shacl         | Dummy test SHACL query   | INFO  | [test_shacl.shacl](queries/test_shacl.shacl)
 
