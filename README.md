@@ -26,11 +26,42 @@ Each query has a logging level (based on [ROBOT report](http://robot.obolibrary.
 * **INFO**: Should be fixed if possible. These are for consistency and cleanliness, such as definitions that do not start with an uppercase character.
 
 
+
+
 # Queries
 Query              | Description              | Level | File                                             | Issue
 -----              | ------------------------ | ----- | ------------------------------------------------ | -----
 test_sparql        | Dummy test SPARQL query  | INFO  | [test_sparql.sparql](queries/test_sparql.sparql) | [1](https://github.com/edamontology/edamverify/issues/1)
 test_shacl         | Dummy test SHACL query   | INFO  | [test_shacl.shacl](queries/test_shacl.shacl)     | [2](https://github.com/edamontology/edamverify/issues/2)
+
+
+# Queries from ROBOT report
+Query                         | Description | Level
+annotation whitespace	      | [link](http://robot.obolibrary.org/report_queries/annotation_whitespace)    | WARN
+deprecated boolean datatype   | [link](http://robot.obolibrary.org/report_queries/deprecated_boolean_datatype)    | ERROR
+deprecated class reference    | [link](http://robot.obolibrary.org/report_queries/deprecated_class_reference)    | ERROR
+deprecated property reference |	[link](http://robot.obolibrary.org/report_queries/deprecated_property_reference)    | ERROR
+duplicate definition	      | [link](http://robot.obolibrary.org/report_queries/duplicate_definition)    | ERROR
+duplicate exact synonym	      | [link](http://robot.obolibrary.org/report_queries/duplicate_exact_synonym)    | WARN
+duplicate label synonym	      | [link](http://robot.obolibrary.org/report_queries/duplicate_label_synonym)    | WARN
+duplicate label	              | [link](http://robot.obolibrary.org/report_queries/duplicate_label)    | ERROR
+duplicate scoped synonym      | [link](http://robot.obolibrary.org/report_queries/duplicate_scoped_synonym)    | WARN
+equivalent pair	              | [link](http://robot.obolibrary.org/report_queries/equivalent_pair)    | WARN
+invalid xref	              | [link](http://robot.obolibrary.org/report_queries/invalid_xref)    | WARN
+label formatting	      | [link](http://robot.obolibrary.org/report_queries/label_formatting)    | ERROR
+label whitespace	      | [link](http://robot.obolibrary.org/report_queries/label_whitespace)    | ERROR
+lowercase definition	      | [link](http://robot.obolibrary.org/report_queries/lowercase_definition)    | INFO
+missing definition	      | [link](http://robot.obolibrary.org/report_queries/missing_definition)    | WARN
+missing label	              | [link](http://robot.obolibrary.org/report_queries/missing_label)    | ERROR
+missing obsolete label	      | [link](http://robot.obolibrary.org/report_queries/missing_obsolete_label)    | WARN
+missing ontology description  | [link](http://robot.obolibrary.org/report_queries/missing_ontology_description)    | ERROR
+missing ontology license      | [link](http://robot.obolibrary.org/report_queries/missing_ontology_license)    | ERROR
+missing ontology title	      | [link](http://robot.obolibrary.org/report_queries/missing_ontology_title)    | ERROR
+missing superclass	      | [link](http://robot.obolibrary.org/report_queries/missing_superclass)    | INFO
+misused obsolete label	      | [link](http://robot.obolibrary.org/report_queries/misused_obsolete_label)    | ERROR
+multiple definitions	      | [link](http://robot.obolibrary.org/report_queries/multiple_definitions)    | ERROR
+multiple equivalent classes   | [link](http://robot.obolibrary.org/report_queries/multiple_equivalent_classes)    | ERROR
+multiple labels	              | [link](http://robot.obolibrary.org/report_queries/multiple_labels)    | ERROR
 
 
 # Files
