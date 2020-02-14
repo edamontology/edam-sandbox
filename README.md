@@ -37,6 +37,7 @@ test_shacl         | Dummy test SHACL query   | INFO  | [test_shacl.shacl](queri
 
 # Queries from ROBOT report
 Query                         | Description | Level
+----------------------------- | ----------- | -----
 annotation whitespace	      | [link](http://robot.obolibrary.org/report_queries/annotation_whitespace)    | WARN
 deprecated boolean datatype   | [link](http://robot.obolibrary.org/report_queries/deprecated_boolean_datatype)    | ERROR
 deprecated class reference    | [link](http://robot.obolibrary.org/report_queries/deprecated_class_reference)    | ERROR
