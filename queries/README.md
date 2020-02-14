@@ -1,0 +1,1 @@
+Queries that [edamverify](https://github.com/edamontology/edamverify) is run on to generate [reports](https://github.com/edamontology/edamverify/tree/master/queries) on EDAM quality.

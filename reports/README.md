@@ -1,1 +1,1 @@
-Reports from running edamverify on the the QC queries. 
+Reports from running [edamverify](https://github.com/edamontology/edamverify) on the the [QC queries](https://github.com/edamontology/edamverify/tree/master/queries). 
