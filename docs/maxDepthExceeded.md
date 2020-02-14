@@ -7,7 +7,7 @@
 **Further information:** See [EDAM Technical details](https://edamontologydocs.readthedocs.io/en/latest/technical_details.html#hierarchy-depth) for hierarchy depth rules and the [Developers Guide](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#hierarchy) for further information.
 
 
-**Query:** [annotationDeprecationMisuse.sparql](https://github.com/edamontology/edamverify/blob/master/queries/annotationDeprecationMisuse.sparql)
+**Query:** [maxDepthExceeded.sparql](https://github.com/edamontology/edamverify/blob/master/queries/maxDepthExceeded.sparql)
 
 ```sparql
 PREFIX obo: <http://purl.obolibrary.org/obo/>
