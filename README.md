@@ -22,10 +22,10 @@ EDAM QC consists of:
 
 
 # Queries
-Query              | Description              | Level | File
------              | ------------------------ | ----- | ----
-test_sparql        | Dummy test SPARQL query  | INFO  | [test_sparql.sparql](queries/test_sparql.sparql)
-test_shacl         | Dummy test SHACL query   | INFO  | [test_shacl.shacl](queries/test_shacl.shacl)
+Query              | Description              | Level | File                                             | Issue
+-----              | ------------------------ | ----- | ------------------------------------------------ | -----
+test_sparql        | Dummy test SPARQL query  | INFO  | [test_sparql.sparql](queries/test_sparql.sparql) | https://github.com/edamontology/edamverify/issues/1
+test_shacl         | Dummy test SHACL query   | INFO  | [test_shacl.shacl](queries/test_shacl.shacl)     | https://github.com/edamontology/edamverify/issues/2
 
 
 # Files
