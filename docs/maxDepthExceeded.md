@@ -1,4 +1,4 @@
-# Maximum depth of ontology exceeded.
+# Maximum depth of ontology exceeded
 
 **Problem:** The depth of EDAM exceeds the recommended maximum depth (a chain of `subClass` relations is too long).
 
