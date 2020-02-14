@@ -29,8 +29,8 @@ Each query has a logging level (based on [ROBOT report](http://robot.obolibrary.
 # Queries
 Query              | Description              | Level | File                                             | Issue
 -----              | ------------------------ | ----- | ------------------------------------------------ | -----
-test_sparql        | Dummy test SPARQL query  | INFO  | [test_sparql.sparql](queries/test_sparql.sparql) | https://github.com/edamontology/edamverify/issues/1
-test_shacl         | Dummy test SHACL query   | INFO  | [test_shacl.shacl](queries/test_shacl.shacl)     | https://github.com/edamontology/edamverify/issues/2
+test_sparql        | Dummy test SPARQL query  | INFO  | [test_sparql.sparql](queries/test_sparql.sparql) | [1](https://github.com/edamontology/edamverify/issues/1)
+test_shacl         | Dummy test SHACL query   | INFO  | [test_shacl.shacl](queries/test_shacl.shacl)     | [2](https://github.com/edamontology/edamverify/issues/2)
 
 
 # Files
