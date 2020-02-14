@@ -34,7 +34,7 @@ Query                         | Description              | Docs | Level | File  
 -----                         | ------------------------ | ---- | ----- | ------------------------------------------------ | -----
 test_sparql                   | Dummy test SPARQL query  | [docs]() | INFO  | [test_sparql.sparql](queries/test_sparql.sparql) | [1](https://github.com/edamontology/edamverify/issues/1)
 test_shacl                    | Dummy test SHACL query   | [docs]() | INFO  | [test_shacl.shacl](queries/test_shacl.shacl)     | [2](https://github.com/edamontology/edamverify/issues/2)
-annotationDeprecationMisuse   
+annotationDeprecationMisuse   | Misuse of properties intended for deprecated concepts only. | [docs](https://github.com/edamontology/edamverify/blob/master/docs/annotationDeprecationMisuse.md) | INFO  | [test_shacl.shacl](queries/test_shacl.shacl)     | [2](https://github.com/edamontology/edamverify/issues/2)
 
 
 # General queries (from [ROBOT report](http://robot.obolibrary.org/report))
