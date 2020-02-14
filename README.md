@@ -35,7 +35,7 @@ Query                    | Level | Docs | File | Issue
 Dummy test SPARQL query  | INFO | - | [1](https://github.com/edamontology/edamverify/issues/1) | [test_sparql.sparql](queries/test_sparql.sparql)
 Dummy test SHACL query   | INFO | - | [2](https://github.com/edamontology/edamverify/issues/2) | [test_shacl.shacl](queries/test_shacl.shacl)
 Misuse of properties intended for deprecated concepts only. | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/annotationDeprecationMisuse.md) | [2](https://github.com/edamontology/edamxpathvalidator/issues/2) | [annotationDeprecationMisuse.sparql](queries/annotationDeprecationMisuse.sparql)
-
+Ontology max depth exceeded | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/maxDepthExceeded.md) | [6](https://github.com/edamontology/edamxpathvalidator/issues/6) | [maxDepthExceeded.sparql](queries/maxDepthExceeded.sparql)
 
 # General queries (from [ROBOT report](http://robot.obolibrary.org/report))
 Query                         | Description | Level
