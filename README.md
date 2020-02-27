@@ -40,6 +40,7 @@ Ontology max depth exceeded | WARN | [docs](https://github.com/edamontology/edam
 Singleton leaf node | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/singletonLeaf.md) | [7](https://github.com/edamontology/edamxpathvalidator/issues/7) | [singletonLeaf.sparql](queries/singletonLeaf.sparql) | todo
 Subset misuse | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/subsetMisuse.md) | [14](https://github.com/edamontology/edamxpathvalidator/issues/14) | [subsetMisuse.sparql](queries/subsetMisuse.sparql) | todo
 Disallowed synonym | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/disallowedSynonym.md) | [11](https://github.com/edamontology/edamxpathvalidator/issues/11) | [disallowedSynonym.sparql](queries/disallowedSynonym.sparql) | todo
+Placholder chain too long | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/placeholderChainTooLong.md) | [8](https://github.com/edamontology/edamxpathvalidator/issues/8) | [placeholderChainTooLong.sparql](queries/placeholderChainTooLong.sparql) | todo
 
 # General queries (from [ROBOT report](http://robot.obolibrary.org/report))
 Query                         | Description | Level
