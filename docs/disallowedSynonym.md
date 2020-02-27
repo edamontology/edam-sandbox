@@ -4,7 +4,7 @@
 
 **Solution:** Either remove the ```narrowSynonym``` or ```narrowSynonym```, or replace it with an ```exactSynonym```. 
 
-**Further information:** See [EDAM Developers Guide](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#optional-attributes) re for information requirement for attributes on subontologies.
+**Further information:** See [EDAM Developers Guide](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#optional-attributes) re information requirement for attributes on subontologies.
 
 **Query:** [disallowedSynonym.sparql](https://github.com/edamontology/edamverify/blob/master/queries/disallowedSynonym.sparql)
 
