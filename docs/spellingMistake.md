@@ -1,4 +1,4 @@
-# Possible spelling mistake in concept definition or comment.
+# Possible spelling mistake in concept definition or comment
 
 **Problem:** The concept definition or comment(s) contain a possible spelling mistake.
 

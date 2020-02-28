@@ -43,6 +43,7 @@ Disallowed synonym | ERROR | [docs](https://github.com/edamontology/edamverify/b
 Placholder chain too long | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/placeholderChainTooLong.md) | [8](https://github.com/edamontology/edamxpathvalidator/issues/8) | [placeholderChainTooLong.sparql](queries/placeholderChainTooLong.sparql) | todo
 Unexpected multiple parents | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/unexpectedMultipleParents.md) | [9](https://github.com/edamontology/edamxpathvalidator/issues/9) | [unexpectedMultipleParents.sparql](queries/unexpectedMultipleParents.sparql) | todo
 Possible spelling mistake | INFO | [docs](https://github.com/edamontology/edamverify/blob/master/docs/spellingMistake.md) | [10](https://github.com/edamontology/edamxpathvalidator/issues/10) | [spellingMistake.sparql](queries/spellingMistake.sparql) | todo
+Bad EDAM URI reference | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/badEdamUriReference.md) | [12](https://github.com/edamontology/edamxpathvalidator/issues/12) | [badEdamUriReference.sparql](queries/badEdamUriReference.sparql) | todo
 
 # General queries (from [ROBOT report](http://robot.obolibrary.org/report))
 Query                         | Description | Level
