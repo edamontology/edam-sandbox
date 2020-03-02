@@ -54,6 +54,7 @@ Leaf concept is placeholder | WARN | [docs](https://github.com/edamontology/edam
 isIdentifierOf redundancy | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/isIdentifierOfRedundancy.md) | [13](https://github.com/edamontology/edamverify/issues/13) | [isIdentifierOfRedundancy.sparql](queries/isIdentifierOfRedundancy.sparql) | todo
 Identifier relation missing | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/identifierRelationMissing.md) | [14](https://github.com/edamontology/edamverify/issues/14) | [identifierRelationMissing.sparql](queries/identifierRelationMissing.sparql) | todo
 Redundant subclass relation  | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/redundantSubclassRelation.md) | [15](https://github.com/edamontology/edamverify/issues/15) | [redundantSubclassRelation.sparql](queries/redundantSubclassRelation.sparql) | todo
+Deprecated concept with disallowed annotations or axioms | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/disallowedDeprecatedContent.md) | [16](https://github.com/edamontology/edamverify/issues/16) | [disallowedDeprecatedContent.sparql](queries/disallowedDeprecatedContent.sparql) | todo
 
 # General queries (from [ROBOT report](http://robot.obolibrary.org/report))
 Query                         | Description | Level
