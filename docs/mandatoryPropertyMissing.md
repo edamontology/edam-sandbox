@@ -1,6 +1,6 @@
 # EDAM concept is missing a mandatory annotation propery
 
-**Problem:** A concept is missing an annotation property that is mandatory.
+**Problem:** A concept is missing an annotation property that is mandatory for all EDAM concepts.
 
 **Solution:** Add the missing annotation property.
 

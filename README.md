@@ -46,6 +46,8 @@ Possible spelling mistake | INFO | [docs](https://github.com/edamontology/edamve
 Bad EDAM URI reference | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/badEdamUriReference.md) | [12](https://github.com/edamontology/edamxpathvalidator/issues/12) | [badEdamUriReference.sparql](queries/badEdamUriReference.sparql) | todo
 Bad non-boolean value | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/badNonBooleanValue.md) | [13](https://github.com/edamontology/edamxpathvalidator/issues/13) | [badNonBooleanValue.sparql](queries/badNonBooleanValue.sparql) | todo
 Mandatory property missing | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/mandatoryPropertyMissing.md) | [8](https://github.com/edamontology/edamverify/issues/8) | [mandatoryPropertyMissing.sparql](queries/mandatoryPropertyMissing.sparql) | todo
+Format property missing | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/formatPropertyMissing.md) | [9](https://github.com/edamontology/edamverify/issues/8) | [formatPropertyMissing.sparql](queries/formatPropertyMissing.sparql) | todo
+Identifier property missing | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/identifierPropertyMissing.md) | [10](https://github.com/edamontology/edamverify/issues/8) | [identifierPropertyMissing.sparql](queries/identifierPropertyMissing.sparql) | todo
 
 # General queries (from [ROBOT report](http://robot.obolibrary.org/report))
 Query                         | Description | Level
