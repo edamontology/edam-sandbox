@@ -1,4 +1,4 @@
-#  Concrete identifier concept is missing mandatory relationships.
+#  Concrete identifier concept is missing mandatory relationships
 
 **Problem:**
 A concrete EDAM Identifier does not descend (via ```subClassOf``` relations) from 1) [Accession](http://edamontology.org/data_2091) or [Name](http://edamontology.org/data_2099) and 2) [Identifier (typed)](http://edamontology.org/data_0976) (or its kids) - these relationships are mandatory!
