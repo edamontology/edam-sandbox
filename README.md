@@ -53,7 +53,7 @@ Missing format file extension | WARN | [docs](https://github.com/edamontology/ed
 Leaf concept is placeholder | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/placeholderLeafConcept.md) | [12](https://github.com/edamontology/edamverify/issues/12) | [placeholderLeafConcept.sparql](queries/placeholderLeafConcept.sparql) | todo
 isIdentifierOf redundancy | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/isIdentifierOfRedundancy.md) | [13](https://github.com/edamontology/edamverify/issues/13) | [isIdentifierOfRedundancy.sparql](queries/isIdentifierOfRedundancy.sparql) | todo
 Identifier relation missing | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/identifierRelationMissing.md) | [14](https://github.com/edamontology/edamverify/issues/14) | [identifierRelationMissing.sparql](queries/identifierRelationMissing.sparql) | todo
-
+Redundant subclass relation  | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/redundantSubclassRelation.md) | [15](https://github.com/edamontology/edamverify/issues/15) | [redundantSubclassRelation.sparql](queries/redundantSubclassRelation.sparql) | todo
 
 # General queries (from [ROBOT report](http://robot.obolibrary.org/report))
 Query                         | Description | Level
