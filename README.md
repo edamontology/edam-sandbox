@@ -45,6 +45,7 @@ Unexpected multiple parents | WARN | [docs](https://github.com/edamontology/edam
 Possible spelling mistake | INFO | [docs](https://github.com/edamontology/edamverify/blob/master/docs/spellingMistake.md) | [10](https://github.com/edamontology/edamxpathvalidator/issues/10) | [spellingMistake.sparql](queries/spellingMistake.sparql) | todo
 Bad EDAM URI reference | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/badEdamUriReference.md) | [12](https://github.com/edamontology/edamxpathvalidator/issues/12) | [badEdamUriReference.sparql](queries/badEdamUriReference.sparql) | todo
 Bad non-boolean value | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/badNonBooleanValue.md) | [13](https://github.com/edamontology/edamxpathvalidator/issues/13) | [badNonBooleanValue.sparql](queries/badNonBooleanValue.sparql) | todo
+Mandatory property missing | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/mandatoryPropertyMissing.md) | [8](https://github.com/edamontology/edamverify/issues/8) | [mandatoryPropertyMissing.sparql](queries/mandatoryPropertyMissing.sparql) | todo
 
 # General queries (from [ROBOT report](http://robot.obolibrary.org/report))
 Query                         | Description | Level
