@@ -49,7 +49,9 @@ Mandatory property missing | ERROR | [docs](https://github.com/edamontology/edam
 Format property missing | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/formatPropertyMissing.md) | [9](https://github.com/edamontology/edamverify/issues/8) | [formatPropertyMissing.sparql](queries/formatPropertyMissing.sparql) | todo
 Identifier property missing | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/identifierPropertyMissing.md) | [10](https://github.com/edamontology/edamverify/issues/8) | [identifierPropertyMissing.sparql](queries/identifierPropertyMissing.sparql) | todo
 Wikipedia link missing | INFO | [docs](https://github.com/edamontology/edamverify/blob/master/docs/wikipediaLinkMissing.md) | [10](https://github.com/edamontology/edamverify/issues/8) | [wikipediaLinkMissing.sparql](queries/wikipediaLinkMissing.sparql) | todo
-Missing Format documentation | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/formatDocumentationMissing.md) | [11](https://github.com/edamontology/edamverify/issues/11) | [formatDocumentationMissing.sparql](queries/formatDocumentationMissing.sparql) | todo
+Missing format file extension | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/formatFileExtensionMissing.md) | [11](https://github.com/edamontology/edamverify/issues/11) | [formatFileExtensionMissing.sparql](queries/formatFileExtensionMissing.sparql) | todo
+Leaf concept is placeholder | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/placeholderLeafConcept.md) | [12](https://github.com/edamontology/edamverify/issues/12) | [placeholderLeafConcept.sparql](queries/placeholderLeafConcept.sparql) | todo
+
 
 # General queries (from [ROBOT report](http://robot.obolibrary.org/report))
 Query                         | Description | Level
