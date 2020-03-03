@@ -1,4 +1,4 @@
-# Duplicat use of numerical component of EDAM concept ID
+# Duplicate use of numerical component of EDAM concept ID
 
 **Problem:** The numerical component of an EDAM concept ID is duplicated in some other concept ID.
 

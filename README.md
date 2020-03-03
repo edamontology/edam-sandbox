@@ -1,5 +1,3 @@
-**UNDER CONSTRUCTION - edamverify is being built and the docs here describe the intended state, not it's current state!**
-
 # EDAM Verification Utility : edamverify
 
 **edamverify** is a utility for verification of the EDAM ontology.  It implements a set of quality control (QC) checks based upon:
@@ -10,10 +8,11 @@
   - [deprecating concepts](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#deprecating-concepts)
 * [Rules of thumb for EDAM development](https://edamontologydocs.readthedocs.io/en/latest/editors_guide.html#rules-of-thumb-for-edam-development) from the [Editors Guide](https://edamontologydocs.readthedocs.io/en/latest/editors_guide.html)
    
-edamverify implements all checks previously implemented in [edamxpathvalidator](https://github.com/edamontology/edamxpathvalidator).
+edamverify implement all checks previously implemented in [edamxpathvalidator](https://github.com/edamontology/edamxpathvalidator).
 
 edamverify is invoked whenever the development copy of EDAM ([EDAM_dev.owl](https://github.com/edamontology/edamontology/blob/master/EDAM_dev.owl)) is changed, using the EDAM Travis CI system.
 
+**NB: Current status is that edamverify is fully specified - implementation will proceed in due coure.**
 
 # EDAM QC implementation
 EDAM QC consists of:
@@ -53,7 +52,7 @@ Missing format file extension | WARN | [docs](https://github.com/edamontology/ed
 Leaf concept is placeholder | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/placeholderLeafConcept.md) | [12](https://github.com/edamontology/edamverify/issues/12) | [placeholderLeafConcept.sparql](queries/placeholderLeafConcept.sparql) | todo
 isIdentifierOf redundancy | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/isIdentifierOfRedundancy.md) | [13](https://github.com/edamontology/edamverify/issues/13) | [isIdentifierOfRedundancy.sparql](queries/isIdentifierOfRedundancy.sparql) | todo
 Identifier relation missing | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/identifierRelationMissing.md) | [14](https://github.com/edamontology/edamverify/issues/14) | [identifierRelationMissing.sparql](queries/identifierRelationMissing.sparql) | todo
-Redundant subclass relation  | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/redundantSubclassRelation.md) | [15](https://github.com/edamontology/edamverify/issues/15) | [redundantSubclassRelation.sparql](queries/redundantSubclassRelation.sparql) | todo
+Redundant subclass relation  | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/redundantSubclassRelation.md) | [15](https://github.com/edamontology/edamverify/issues/15) | [redundantSubclassRelation.sparql](queries/redundantSubclassRelation.sparql) | todo
 Deprecated concept with disallowed annotations or axioms | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/disallowedDeprecatedContent.md) | [16](https://github.com/edamontology/edamverify/issues/16) | [disallowedDeprecatedContent.sparql](queries/disallowedDeprecatedContent.sparql) | todo
 Concept namespace subset mismatch | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/namespaceSubsetMismatch.md) | [17](https://github.com/edamontology/edamverify/issues/17) | [namespaceSubsetMismatch.sparql](queries/namespaceSubsetMismatch.sparql) | todo
 Concept ID numerical duplication | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/iDNumericalDuplication.md) | [18](https://github.com/edamontology/edamverify/issues/18) | [iDNumericalDuplication.sparql](queries/iDNumericalDuplication.sparql) | todo
