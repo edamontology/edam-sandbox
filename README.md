@@ -55,6 +55,8 @@ isIdentifierOf redundancy | WARN | [docs](https://github.com/edamontology/edamve
 Identifier relation missing | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/identifierRelationMissing.md) | [14](https://github.com/edamontology/edamverify/issues/14) | [identifierRelationMissing.sparql](queries/identifierRelationMissing.sparql) | todo
 Redundant subclass relation  | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/redundantSubclassRelation.md) | [15](https://github.com/edamontology/edamverify/issues/15) | [redundantSubclassRelation.sparql](queries/redundantSubclassRelation.sparql) | todo
 Deprecated concept with disallowed annotations or axioms | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/disallowedDeprecatedContent.md) | [16](https://github.com/edamontology/edamverify/issues/16) | [disallowedDeprecatedContent.sparql](queries/disallowedDeprecatedContent.sparql) | todo
+Concept namespace subset mismatch | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/namespaceSubsetMismatch.md) | [17](https://github.com/edamontology/edamverify/issues/17) | [namespaceSubsetMismatch.sparql](queries/namespaceSubsetMismatch.sparql) | todo
+Concept ID numerical duplication | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/iDNumericalDuplication.md) | [18](https://github.com/edamontology/edamverify/issues/18) | [iDNumericalDuplication.sparql](queries/iDNumericalDuplication.sparql) | todo
 
 # General queries (from [ROBOT report](http://robot.obolibrary.org/report))
 Query                         | Description | Level
