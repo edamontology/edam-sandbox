@@ -56,6 +56,8 @@ Redundant subclass relation  | WARN | [docs](https://github.com/edamontology/eda
 Deprecated concept with disallowed annotations or axioms | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/disallowedDeprecatedContent.md) | [16](https://github.com/edamontology/edamverify/issues/16) | [disallowedDeprecatedContent.sparql](queries/disallowedDeprecatedContent.sparql) | todo
 Concept namespace subset mismatch | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/namespaceSubsetMismatch.md) | [17](https://github.com/edamontology/edamverify/issues/17) | [namespaceSubsetMismatch.sparql](queries/namespaceSubsetMismatch.sparql) | todo
 Concept ID numerical duplication | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/iDNumericalDuplication.md) | [18](https://github.com/edamontology/edamverify/issues/18) | [iDNumericalDuplication.sparql](queries/iDNumericalDuplication.sparql) | todo
+File extension lacks synyonm | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/fileExtensionMissingSynonym.md) | [19](https://github.com/edamontology/edamverify/issues/19) | [fileExtensionMissingSynonym.sparql](queries/fileExtensionMissingSynonym.sparql) | todo
+File extension bad capitalisation | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/fileExtensionBadCapitalisation.md) | [19](https://github.com/edamontology/edamverify/issues/19) | [fileExtensionBadCapitalisation.sparql](queries/fileExtensionBadCapitalisation.sparql) | todo
 
 # General queries (from [ROBOT report](http://robot.obolibrary.org/report))
 Query                         | Description | Level
