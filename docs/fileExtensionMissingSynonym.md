@@ -2,7 +2,7 @@
 
 **Problem:** A file extension specified for an EDAM Format concept does not also appear as an ```exactSynonym``` of that concept (this is mandatory).
 
-**Solution:** Add the missing synonym(s). For example for the file extension ```.txt``` two synyonms should be specified: ```.txt``` and ```txt```.
+**Solution:** Add the missing synonym(s). For example for the file extension ```txt``` two synyonms should be specified: ```.txt``` and ```txt```.
 
 **Further information:** See [EDAM Developers Guide](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#optional-attributes) for more information.
 

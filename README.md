@@ -58,6 +58,7 @@ Concept namespace subset mismatch | ERROR | [docs](https://github.com/edamontolo
 Concept ID numerical duplication | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/iDNumericalDuplication.md) | [18](https://github.com/edamontology/edamverify/issues/18) | [iDNumericalDuplication.sparql](queries/iDNumericalDuplication.sparql) | todo
 File extension lacks synyonm | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/fileExtensionMissingSynonym.md) | [19](https://github.com/edamontology/edamverify/issues/19) | [fileExtensionMissingSynonym.sparql](queries/fileExtensionMissingSynonym.sparql) | todo
 File extension bad capitalisation | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/fileExtensionBadCapitalisation.md) | [19](https://github.com/edamontology/edamverify/issues/19) | [fileExtensionBadCapitalisation.sparql](queries/fileExtensionBadCapitalisation.sparql) | todo
+File extension with period | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/fileExtensionWithPeriod.md) | [20](https://github.com/edamontology/edamverify/issues/20) | [fileExtensionWithPeriod.sparql](queries/fileExtensionWithPeriod.sparql) | todo
 
 # General queries (from [ROBOT report](http://robot.obolibrary.org/report))
 Query                         | Description | Level
