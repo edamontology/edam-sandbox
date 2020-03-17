@@ -60,7 +60,7 @@ File extension lacks synyonm | WARN | [docs](https://github.com/edamontology/eda
 File extension bad capitalisation | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/fileExtensionBadCapitalisation.md) | [19](https://github.com/edamontology/edamverify/issues/19) | SPARQL | [fileExtensionBadCapitalisation.sparql](queries/fileExtensionBadCapitalisation.sparql) | todo
 File extension with period | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/fileExtensionWithPeriod.md) | [20](https://github.com/edamontology/edamverify/issues/20) | SPARQL | [fileExtensionWithPeriod.sparql](queries/fileExtensionWithPeriod.sparql) | todo
 
-[1] everything is labellled as "SPARQL" - we will try to write the check in SPARQL first.  "SHACL" is another possibility.  Failing that Python (in which case the links under "File" will be replaced with links to the relevant Python script).
+[1] everything is labellled as "SPARQL" - we will try to write the check in SPARQL first.  "SHACL" is another possibility.  Failing that "Python" (in which case the links under "File" will be replaced with links to the relevant Python script).
 
 
 # General queries (from [ROBOT report](http://robot.obolibrary.org/report))
