@@ -6,7 +6,7 @@ Any Python environment would be fine but Conda is an easy to use environment / p
 Conda can be installed from https://docs.conda.io/en/latest/miniconda.html.
 The following commands aim at creating a specific conda environment, with RDFlib and Jupyter-notebook packages.  
 ```
-conda create --name edamverify
+conda create --name edamverify python=3.7 
 conda activate edamverify
 conda install rdflib jupyter 
 ```
