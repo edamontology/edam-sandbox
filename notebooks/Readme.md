@@ -10,3 +10,17 @@ conda create --name edamverify python=3.7
 conda activate edamverify
 conda install rdflib jupyter -c conda-forge
 ```
+
+To switch to another conda environment, you can just launch `conda deactivate` and list all available cond environments `conda env list`. 
+
+For the ones more comfortable with PIP:
+```
+pip install rdflib
+pip install jupyter
+```
+
+Finally the jupyter notebook can be launched with: 
+```
+jupyter-notebook
+```
+
