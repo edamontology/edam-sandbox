@@ -8,5 +8,5 @@ The following commands aim at creating a specific conda environment, with RDFlib
 ```
 conda create --name edamverify python=3.7 
 conda activate edamverify
-conda install rdflib jupyter 
+conda install rdflib jupyter -c conda-forge
 ```
