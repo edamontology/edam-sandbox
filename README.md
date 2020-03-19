@@ -55,10 +55,10 @@ Deprecated concept with disallowed annotations or axioms | ERROR | [docs](https:
 Concept namespace subset mismatch | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/namespaceSubsetMismatch.md) | [17](https://github.com/edamontology/edamverify/issues/17) | SPARQL | [namespaceSubsetMismatch.sparql](queries/namespaceSubsetMismatch.sparql) | todo
 Concept ID numerical duplication | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/iDNumericalDuplication.md) | [18](https://github.com/edamontology/edamverify/issues/18) | SPARQL | [iDNumericalDuplication.sparql](queries/iDNumericalDuplication.sparql) | todo
 File extension lacks synyonm | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/fileExtensionMissingSynonym.md) | [19](https://github.com/edamontology/edamverify/issues/19) | SPARQL | [fileExtensionMissingSynonym.sparql](queries/fileExtensionMissingSynonym.sparql) | todo
-File extension bad capitalisation | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/fileExtensionBadCharacter.md) | [19](https://github.com/edamontology/edamverify/issues/19) | IPYNB | [fileExtensionBadCharacter.ipynb](queries/fileExtensionBadCharacter.ipynb) | todo
+File extension bad characters | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/fileExtensionBadCharacter.md) | [19](https://github.com/edamontology/edamverify/issues/19) | IPYNB | [fileExtensionBadCharacter.ipynb](queries/fileExtensionBadCharacter.ipynb) | done
 File extension with period | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/fileExtensionWithPeriod.md) | [20](https://github.com/edamontology/edamverify/issues/20) | SPARQL | [fileExtensionWithPeriod.sparql](queries/fileExtensionWithPeriod.sparql) | todo
 
-[1] everything is labellled as "SPARQL" - we will try to write the check in SPARQL first.  "SHACL" is another possibility.  Failing that "Python" (in which case the links under "File" will be replaced with links to the relevant Python script).
+[1] everything is labellled as "SPARQL" - we will try to write the check in SPARQL first.  "SHACL" is another possibility.  Failing that "IPYNB" (Juypter notebook) or "Python" (in later two cases the links under "File" will be replaced with links to the relevant notebook or Python script).
 
 
 # General queries (from [ROBOT report](http://robot.obolibrary.org/report))
