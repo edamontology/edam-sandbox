@@ -31,8 +31,6 @@ The problem detected by the query and its remedy are documented in the [docs]() 
 # Queries
 Query                    | Level | Docs | Issue| Solution [1] | File | Status
 -----                    | ----- | ---- | ---- | ------------ | ---- | ------
-Dummy test SPARQL query  | INFO | - | [1](https://github.com/edamontology/edamverify/issues/1) | SPARQL | [test_sparql.ipynb](queries/test_sparql.ipynb) | todo
-Dummy test SHACL query   | INFO | - | [2](https://github.com/edamontology/edamverify/issues/2) | SPARQL | [test_shacl.shacl](queries/test_shacl.shacl) | todo
 Omission of properties required for deprecated concepts | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/annotationDeprecationOmission.md) | [3](https://github.com/edamontology/edamverify/issues/3) | SPARQL | [annotationDeprecationOmission.sparql](queries/annotationDeprecationOmission.sparql) | todo
 Misuse of properties intended for deprecated concepts only | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/annotationDeprecationMisuse.md) | [2](https://github.com/edamontology/edamxpathvalidator/issues/2) | SPARQL | [annotationDeprecationMisuse.sparql](queries/annotationDeprecationMisuse.sparql) | todo
 Ontology max depth exceeded | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/maxDepthExceeded.md) | [6](https://github.com/edamontology/edamxpathvalidator/issues/6) | SPARQL | [maxDepthExceeded.sparql](queries/maxDepthExceeded.sparql) | todo
