@@ -1,10 +1,10 @@
-# EDAM Format concept is missing synyonm for file extension
+# EDAM Format concept is missing synyonm or label matching the file extension
 
-**Problem:** A file extension specified for an EDAM Format concept does not also appear as an ```exactSynonym``` of that concept (this is mandatory).
+**Problem:** A file extension specified for an EDAM Format concept is not also set as the concept label or exactSynonym (this is mandatory).
 
-**Solution:** Add the missing synonym(s). For example for the file extension ```txt``` two synyonms should be specified: ```.txt``` and ```txt```.
+**Solution:** Ensure that either the concept label or an exact synonym matches the file extension, typically by adding an exact synonym.
 
-**Further information:** See [EDAM Developers Guide](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#optional-attributes) for more information.
+**Further information:** For EDAM concepts, the value set for ```<file_extension>``` must also be given for the ```rdfs:label``` or an ```exact_synonym```. See [EDAM Developers Guide](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#optional-attributes) for more information.
 
 
 **Query:** [fileExtensionMissingSynonym.sparql](https://github.com/edamontology/edamverify/blob/master/queries/fileExtensionMissingSynonym.sparql)
