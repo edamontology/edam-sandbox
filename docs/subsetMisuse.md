@@ -1,6 +1,6 @@
 # Misuse of subset annotation property
 
-**Problem:** The specified EDAM subset for a concept is wrong because the value: 1) mismatches the subontology (non-deprecated concepts) or 2) is misstated (deprecated concepts) or 3) is otherwise not supported.
+**Problem:** The specified EDAM subset for a concept is wrong because the value: 1) mismatches the subontology (non-deprecated concepts), 2) is misstated (deprecated concepts), or 3) is otherwise not supported.
 
 **Solution:** Change the subset to the correct value.
 
