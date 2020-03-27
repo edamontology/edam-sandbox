@@ -7,12 +7,4 @@
 **Further information:** For EDAM concepts, the value set for ```<file_extension>``` must also be given for the ```rdfs:label``` or an ```exact_synonym```. See [EDAM Developers Guide](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#optional-attributes) for more information.
 
 
-**Query:** [fileExtensionMissingSynonym.sparql](https://github.com/edamontology/edamverify/blob/master/queries/fileExtensionMissingSynonym.sparql)
-
-```sparql
-PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ... <todo>
-```
+**Script:** [fileExtensionMissingSynonym.ipynb](https://github.com/edamontology/edamverify/blob/master/queries/fileExtensionMissingSynonym.ipynb)
