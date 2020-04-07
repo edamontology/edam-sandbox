@@ -7,7 +7,7 @@
 **Further information:** The ```documentation``` annotation property is used for Wikipedia URLs (see [EDAM Developers Guide](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#optional-attributes)).  See also the [Editors Guide](https://edamontologydocs.readthedocs.io/en/latest/editors_guide.html#id5).
 
 
-**Query:** [wikipediaLinkMissing.sparql](https://github.com/edamontology/edamverify/blob/master/queries/wikipediaLinkMissing.sparql)
+**Query:** [wikipediaLinkMissing.ipynb](https://github.com/edamontology/edamverify/blob/master/queries/wikipediaLinkMissing.ipynb)
 
 ```sparql
 PREFIX obo: <http://purl.obolibrary.org/obo/>
