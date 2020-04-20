@@ -6,7 +6,11 @@
 
 **Further information:**
 
-Concept subset is defined by ```oboInOwl:inSubset``` annotation property and must have an applicable value from ```oboInOwl:SubsetProperty```. The EDAM [subontology subset](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#mandatory-attributes) to which the concept has been assigned by setting the ```oboInOwl:inSubset``` to one of ```topic```, ```operation```, ```data``` or ```format``` *must* match the URI [namespace](https://edamontologydocs.readthedocs.io/en/latest/technical_details.html#identifiers-persistent-urls) of an EDAM concept ID, *e.g.* ```http://edamontology.org/topic_```.
+Concept subset is defined by ```oboInOwl:inSubset``` annotation property and must have an applicable value from ```oboInOwl:SubsetProperty```.
+
+The EDAM [subontology subset](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#mandatory-attributes) to which the concept has been assigned by setting the ```oboInOwl:inSubset``` to one of ```topic```, ```operation```, ```data``` or ```format``` *must* match the URI [namespace](https://edamontologydocs.readthedocs.io/en/latest/technical_details.html#identifiers-persistent-urls) of an EDAM concept ID, *e.g.* ```http://edamontology.org/topic_```.
+
+Deprecated concepts must be assigned to (and only to) the ``obsolete`` subset.
 
 See [EDAM technical details](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#mandatory-attributes) and [deprecation rules](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#deprecating-concepts).
 
