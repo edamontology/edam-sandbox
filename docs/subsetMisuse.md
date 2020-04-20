@@ -6,6 +6,8 @@
 
 **Further information:**
 
-Concept subset is defined by ```oboInOwl:inSubset``` annotation property and must have an applicable value from ```oboInOwl:SubsetProperty```.  The URI [namespace](https://edamontologydocs.readthedocs.io/en/latest/technical_details.html#identifiers-persistent-urls) of an EDAM concept ID, *e.g.* ```http://edamontology.org/topic_```, must match the EDAM [subontology subset](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#mandatory-attributes) to which the concept has been assigned by setting the ```oboInOwl:inSubset``` to one of ```topic```, ```operation```, ```data``` or ```format```.  See [EDAM technical details](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#mandatory-attributes) and [deprecation rules](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#deprecating-concepts).
+Concept subset is defined by ```oboInOwl:inSubset``` annotation property and must have an applicable value from ```oboInOwl:SubsetProperty```. The EDAM [subontology subset](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#mandatory-attributes) to which the concept has been assigned by setting the ```oboInOwl:inSubset``` to one of ```topic```, ```operation```, ```data``` or ```format``` *must* match the URI [namespace](https://edamontologydocs.readthedocs.io/en/latest/technical_details.html#identifiers-persistent-urls) of an EDAM concept ID, *e.g.* ```http://edamontology.org/topic_```.
+
+See [EDAM technical details](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#mandatory-attributes) and [deprecation rules](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#deprecating-concepts).
 
 **Script:** [subsetMisuse.ipynb](https://github.com/edamontology/edamverify/blob/master/queries/subsetMisuse.ipynb)
