@@ -31,7 +31,7 @@ The problem detected by the query and its remedy are documented in the [docs]() 
 # Queries
 Query                    | Level | Docs | Issue| Solution [1] | File | Status
 -----                    | ----- | ---- | ---- | ------------ | ---- | ------
-Omission of properties required for deprecated concepts | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/annotationDeprecationOmission.md) | [3](https://github.com/edamontology/edamverify/issues/3) | SPARQL | [annotationDeprecationOmission.sparql](queries/annotationDeprecationOmission.sparql) | todo
+Omission of properties required for deprecated concepts | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/annotationDeprecationOmission.md) | [3](https://github.com/edamontology/edamverify/issues/3) | IPYNB | [annotationDeprecationOmission.ipynb](queries/annotationDeprecationOmission.ipynb) | **DONE**
 Misuse of properties intended for deprecated concepts only | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/annotationDeprecationMisuse.md) | [2](https://github.com/edamontology/edamxpathvalidator/issues/2) | IPYNB | [annotationDeprecationMisuse.ipynb](queries/annotationDeprecationMisuse.ipynb) | **DONE**
 Ontology max depth exceeded | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/maxDepthExceeded.md) | [6](https://github.com/edamontology/edamxpathvalidator/issues/6) | SPARQL | [maxDepthExceeded.sparql](queries/maxDepthExceeded.sparql) | todo
 Singleton leaf node | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/singletonLeaf.md) | [7](https://github.com/edamontology/edamxpathvalidator/issues/7) | SPARQL | [singletonLeaf.sparql](queries/singletonLeaf.sparql) | todo
