@@ -9,12 +9,5 @@
 Deprecated concepts can only contain certain annotation properties and axioms, as defined [here](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#deprecating-concepts).
 
 
-**Query:** [disallowedDeprecatedContent.sparql](https://github.com/edamontology/edamverify/blob/master/queries/disallowedDeprecatedContent.sparql)
+**Query:** [disallowedDeprecatedContent.ipynb](https://github.com/edamontology/edamverify/blob/master/queries/disallowedDeprecatedContent.ipynb)
 
-```sparql
-PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ... <todo>
-```
