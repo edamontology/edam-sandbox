@@ -1,10 +1,10 @@
 # EDAM identifier concept is missing a mandatory annotation propery
 
-**Problem:** An EDAM Identifier concept is missing an annotation property that is mandatory.
+**Problem:** An EDAM Identifier concept is missing an annotation property that is mandatory or recommended.
 
 **Solution:** Add the missing annotation property.
 
-**Further information:** See [EDAM Developers Guide](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#deprecating-concepts) for a list of annotation properties that must be defined on EDAM Identifier concepts.  This check does not include properties that are mandatory for *all* concepts.
+**Further information:** See [EDAM Developers Guide](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#deprecating-concepts) for a list of annotation properties that must or should be defined on EDAM Identifier concepts.  This check does not include properties that are mandatory for *all* concepts.
 
 
 **Query:** [identifierPropertyMissing.sparql](https://github.com/edamontology/edamverify/blob/master/queries/identifierPropertyMissing.sparql)
