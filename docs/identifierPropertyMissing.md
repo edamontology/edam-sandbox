@@ -1,4 +1,4 @@
-# EDAM identifier concept is missing a mandatory or recommended annotation propery
+# EDAM identifier concept is missing a mandatory or recommended annotation property
 
 **Problem:** An EDAM Identifier concept is missing an annotation property that is mandatory or recommended.
 

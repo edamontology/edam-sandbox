@@ -1,4 +1,4 @@
-# EDAM Format concept is missing a mandatory or recommended annotation propery
+# EDAM Format concept is missing a mandatory or recommended annotation property
 
 **Problem:** An EDAM Format concept is missing an annotation property that is mandatory or recommended.
 
