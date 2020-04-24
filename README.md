@@ -1,6 +1,6 @@
-# EDAM Verification Utility : edamverify
+# EDAM Verification Utility Suite : edamverify
 
-**edamverify** is a utility for verification of the EDAM ontology.  It implements a set of quality control (QC) checks based upon:
+**edamverify** is a utility suite for verification of the EDAM ontology.  It implements a set of quality control (QC) checks based upon:
 
 * Guidelines from the [Developers Guide](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html) for
   - [adding concepts](https://edamontologydocs.readthedocs.io/en/latest/developers_guide.html#adding-concepts)
