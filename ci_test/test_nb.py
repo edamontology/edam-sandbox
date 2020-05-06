@@ -6,7 +6,7 @@ from nbconvert.preprocessors import ExecutePreprocessor
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s: %(message)s', stream=sys.stdout)
 
-class TestLogging(unittest.TestCase):
+class TestNotebooks(unittest.TestCase):
 
     def setUp(self) -> None:
         logging.info("Logger intialized ! ")
