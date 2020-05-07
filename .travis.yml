@@ -25,7 +25,6 @@ install:
   - conda activate test-environment
 
 script:
-  - cd src
   - nose2
 
 notifications:
