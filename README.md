@@ -1,4 +1,4 @@
-# EDAM Verification Utility Suite : edamverify
+# EDAM Verification Utility Suite : edamverify [![Build Status](https://travis-ci.org/edamontology/edamverify.svg?branch=master)](https://travis-ci.org/edamontology/edamverify)
 
 **edamverify** is a utility suite for verification of the EDAM ontology.  It implements a set of quality control (QC) checks based upon:
 

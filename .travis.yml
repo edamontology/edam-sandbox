@@ -21,12 +21,11 @@ install:
   # Useful for debugging any issues with conda
   - conda info -a
 
-  - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION rdflib requests jupyter nose2 -c conda-forge
+  - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION rdflib requests parameterized jupyter nose2 -c conda-forge
   - conda activate test-environment
 
 script:
-  - cd src
-  - nose2
+  - nose2 --with-coverage --verbose
 
 notifications:
   email:
