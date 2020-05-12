@@ -27,6 +27,15 @@ Each query has a logging level (based on [ROBOT report](http://robot.obolibrary.
 The problem detected by the query and its remedy are documented in the [docs]() folder. 
 
 
+# Report format
+The QC check results are written to the last cell of the Jupyter notebook in a consistent JSON format, for example:
+
+```
+"Test name": "iDNumericalDuplication", "Status": "ERROR", "Reason": "Suspected duplication of the numerical component of the concept ID for these concepts:
+http://edamontology.org/topic_0780 (Plant biology) in subset:http://purl.obolibrary.org/obo/edam#topics ::: http://edamontology.org/topic_0780 (Botany) in subset:http://purl.obolibrary.org/obo/edam#topics
+http://edamontology.org/operation_3456 (Rigid body refinement) in subset:http://purl.obolibrary.org/obo/edam#data ::: http://edamontology.org/operation_3456 (Rigid body refinement) in subset:http://purl.obolibrary.org/obo/edam#operations"
+```
+
 
 # Tests
 Test                    | Level | Docs | Issue| Solution [1] | File | Status
