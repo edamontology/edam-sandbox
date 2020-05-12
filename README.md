@@ -12,7 +12,7 @@ edamverify implement all checks previously implemented in [edamxpathvalidator](h
 
 edamverify is invoked whenever the development copy of EDAM ([EDAM_dev.owl](https://github.com/edamontology/edamontology/blob/master/EDAM_dev.owl)) is changed, using the EDAM Travis CI system.
 
-**NB: Current status is that edamverify is fully specified - implementation will proceed in due coure.**
+**NB Current status: edamverify is fully specified - implementation is ongoing.**
 
 # EDAM QC implementation
 EDAM QC consists of:
@@ -25,7 +25,7 @@ Each query has a logging level (based on [ROBOT report](http://robot.obolibrary.
 * **INFO**: Should be fixed if possible. These are for consistency and cleanliness, such as definitions that do not start with an uppercase character.
 * **NOERR**: No error found.
 
-The problem detected by the query and its remedy are documented in the [docs]() folder. 
+The problems detected by each query and its remedy are documented in the [docs]() folder. 
 
 
 # Report format
