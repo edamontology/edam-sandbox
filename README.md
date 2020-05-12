@@ -23,6 +23,7 @@ Each query has a logging level (based on [ROBOT report](http://robot.obolibrary.
 * **ERROR**: Must be fixed before releasing EDAM. These issues will cause problems for users, such as classes with multiple labels.
 * **WARN**: Should be fixed as soon as possible. These will not cause problems for all users, but may not be what they expect. For example, a class that is inferred to be equivalent to another named class.
 * **INFO**: Should be fixed if possible. These are for consistency and cleanliness, such as definitions that do not start with an uppercase character.
+* **NOERR**: No error found.
 
 The problem detected by the query and its remedy are documented in the [docs]() folder. 
 
