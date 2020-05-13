@@ -29,12 +29,23 @@ The problems detected by each query and its remedy are documented in the [docs](
 
 
 # Report format
-The QC check results are written to the last cell of the Jupyter notebook in a consistent JSON format, for example:
+The QC check results are written to the last cell [1] of the Jupyter notebook in a consistent JSON format, for example:
 
+[1] as required by the script which invokes and parses these notebooks in Travis CI
 ```
-"Test name": "iDNumericalDuplication", "Status": "ERROR", "Reason": "Suspected duplication of the numerical component of the concept ID for these concepts:
-http://edamontology.org/topic_0780 (Plant biology) in subset:http://purl.obolibrary.org/obo/edam#topics ::: http://edamontology.org/topic_0780 (Botany) in subset:http://purl.obolibrary.org/obo/edam#topics
-http://edamontology.org/operation_3456 (Rigid body refinement) in subset:http://purl.obolibrary.org/obo/edam#data ::: http://edamontology.org/operation_3456 (Rigid body refinement) in subset:http://purl.obolibrary.org/obo/edam#operations"
+
+{
+    "test_name": "fileExtensionBadCharacter",
+    "reason": [
+        "Bad characters found in <file_extension> property of these concepts:",
+        "http://edamontology.org/format_3556 (MHTML): mhtml|mht|eml",
+        "http://edamontology.org/format_3682 (imzML metadata file): imzML",
+        "http://edamontology.org/format_3789 (XQuery): xq|xqy|xquery",
+        "http://edamontology.org/format_3475 (TSV): tsv|tab",
+        "http://edamontology.org/format_3750 (YAML): yaml|yml"
+    ],
+    "status": "WARN"
+}
 ```
 
 
