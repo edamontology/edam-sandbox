@@ -1,5 +1,7 @@
 import unittest
-import logging, sys, os
+import logging
+import sys
+import os
 import subprocess
 
 import nbformat
@@ -9,20 +11,12 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s: %(m
 
 class TestXPathValid(unittest.TestCase):
 
-    def setUp(self) -> None:
-        logging.info("Logger initialized ! ")
-
-    #@unittest.skip("xpath validation skipped")
     def test_edamxpathvalidator(self):
-        process = subprocess.run(['edamxpathvalidator', '../../edamontology/EDAM_dev.owl'], env=os.environ.copy())
-        self.assertEqual(process.stdout,'')
-        self.assertEqual(process.stderr,'')
+        edam_path = os.environ.get('EDAM_PATH', 'EDAM_dev.owl')
+        process = subprocess.run(['edamxpathvalidator', edam_path], stdout=subprocess.PIPE, universal_newlines=True, env=os.environ.copy())
+        self.assertEqual(process.stdout,None, msg=f'Errors detected in the ontology:\n{process.stdout}')
         if process.returncode != 0:
             self.fail(f'edamxpathvalidator failed with rc {process.returncode}')
             
-    def tearDown(self) -> None:
-        logging.info("End of unit test")
-
-
 if __name__ == '__main__':
     unittest.main()
