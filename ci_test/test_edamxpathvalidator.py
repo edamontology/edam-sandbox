@@ -1,5 +1,5 @@
 import unittest
-import logging, sys
+import logging, sys, os
 import subprocess
 
 import nbformat
@@ -12,10 +12,11 @@ class TestXPathValid(unittest.TestCase):
     def setUp(self) -> None:
         logging.info("Logger initialized ! ")
 
-    @unittest.skip("xpath validation skipped")
+    #@unittest.skip("xpath validation skipped")
     def test_edamxpathvalidator(self):
-        process = subprocess.Popen(['edamxpathvalidator', '../../edamontology/EDAM_dev.owl'])
-        output, error = process.communicate()
+        process = subprocess.run(['edamxpathvalidator', '../../edamontology/EDAM_dev.owl'], env=os.environ.copy())
+        self.assertEqual(process.stdout,'')
+        self.assertEqual(process.stderr,'')
         if process.returncode != 0:
             self.fail(f'edamxpathvalidator failed with rc {process.returncode}')
             

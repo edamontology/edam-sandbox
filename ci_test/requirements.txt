@@ -1,3 +1,5 @@
 nbformat
 nbconvert
 nose
+parameterized
+git+https://github.com/edamontology/edamxpathvalidator.git
