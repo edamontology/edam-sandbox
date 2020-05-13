@@ -34,19 +34,18 @@ class TestNotebooks(unittest.TestCase):
     def test_all_nb(self, entry_path):
         #for nb in entry_path:
             print(f'Testing {entry_path}')
-            try:
-                with open(entry_path) as f:
-                    nb = nbformat.read(f, as_version=4)
-                    ep = ExecutePreprocessor(timeout=600, kernel_name='python3')
-                    ep.preprocess(nb, {'metadata': {'path': 'ci_test/'}})
-            except Exception as e:
-                message = str(e.args)
-                print(message)
-                if "sys.exit(ERROR)" in message :
-                    self.fail("Error")
-                else:
-                    print('OK')
-                    pass
+
+            with open(entry_path) as f:
+                nb = nbformat.read(f, as_version=4)
+                ep = ExecutePreprocessor(timeout=600, kernel_name='python3')
+                ep.preprocess(nb, {'metadata': {'path': 'ci_test/'}})
+
+                edam_test_output = nb['cells'][-1]['outputs'][0]['text']
+                out = json.loads(edam_test_output)
+                print()
+                print(f"test name: {out['test_name']}\nstatus: {out['status']}\nreason: {out['reason']}")
+                self.assertNotEquals(out['status'], "ERROR")
+
 
     @unittest.skip("demonstrating skipping")
     def test_exception_nb(self):
