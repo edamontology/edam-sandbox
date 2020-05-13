@@ -12,7 +12,7 @@ edamverify implement all checks previously implemented in [edamxpathvalidator](h
 
 edamverify is invoked whenever the development copy of EDAM ([EDAM_dev.owl](https://github.com/edamontology/edamontology/blob/master/EDAM_dev.owl)) is changed, using the EDAM Travis CI system.
 
-**NB: Current status is that edamverify is fully specified - implementation will proceed in due coure.**
+**NB Current status: edamverify is fully specified - implementation is ongoing.**
 
 # EDAM QC implementation
 EDAM QC consists of:
@@ -23,9 +23,19 @@ Each query has a logging level (based on [ROBOT report](http://robot.obolibrary.
 * **ERROR**: Must be fixed before releasing EDAM. These issues will cause problems for users, such as classes with multiple labels.
 * **WARN**: Should be fixed as soon as possible. These will not cause problems for all users, but may not be what they expect. For example, a class that is inferred to be equivalent to another named class.
 * **INFO**: Should be fixed if possible. These are for consistency and cleanliness, such as definitions that do not start with an uppercase character.
+* **NOERR**: No error found.
 
-The problem detected by the query and its remedy are documented in the [docs]() folder. 
+The problems detected by each query and its remedy are documented in the [docs]() folder. 
 
+
+# Report format
+The QC check results are written to the last cell of the Jupyter notebook in a consistent JSON format, for example:
+
+```
+"Test name": "iDNumericalDuplication", "Status": "ERROR", "Reason": "Suspected duplication of the numerical component of the concept ID for these concepts:
+http://edamontology.org/topic_0780 (Plant biology) in subset:http://purl.obolibrary.org/obo/edam#topics ::: http://edamontology.org/topic_0780 (Botany) in subset:http://purl.obolibrary.org/obo/edam#topics
+http://edamontology.org/operation_3456 (Rigid body refinement) in subset:http://purl.obolibrary.org/obo/edam#data ::: http://edamontology.org/operation_3456 (Rigid body refinement) in subset:http://purl.obolibrary.org/obo/edam#operations"
+```
 
 
 # Tests
@@ -52,7 +62,7 @@ Identifier relation missing | ERROR | [docs](https://github.com/edamontology/eda
 Format relation missing | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/formatRelationMissing.md) | [26](https://github.com/edamontology/edamverify/issues/26) | SPARQL | [formatRelationMissing.sparql](queries/formatRelationMissing.sparql) | todo
 Redundant subclass relation  | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/redundantSubclassRelation.md) | [15](https://github.com/edamontology/edamverify/issues/15) | SPARQL | [redundantSubclassRelation.sparql](queries/redundantSubclassRelation.sparql) | todo
 Deprecated concept with disallowed annotations or axioms | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/disallowedDeprecatedContent.md) | [16](https://github.com/edamontology/edamverify/issues/16) | IPYNB | [disallowedDeprecatedContent.ipynb](queries/disallowedDeprecatedContent.ipynb) | **DONE**
-Concept ID numerical duplication | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/iDNumericalDuplication.md) | [18](https://github.com/edamontology/edamverify/issues/18) | IPYNB | [iDNumericalDuplication.ipynb](queries/iDNumericalDuplication.ipynb) | **DONE**
+Concept ID numerical duplication | ERROR | [docs](https://github.com/edamontology/edamverify/blob/master/docs/idNumericalDuplication.md) | [18](https://github.com/edamontology/edamverify/issues/18) | IPYNB | [idNumericalDuplication.ipynb](queries/idNumericalDuplication.ipynb) | **DONE**
 File extension lacks synyonm | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/fileExtensionMissingSynonym.md) | [19](https://github.com/edamontology/edamverify/issues/19) | SPARQL | [fileExtensionMissingSynonym.ipynb](queries/fileExtensionMissingSynonym.ipynb) | **DONE**
 File extension bad characters | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/fileExtensionBadCharacter.md) | [19](https://github.com/edamontology/edamverify/issues/19), [20](https://github.com/edamontology/edamverify/issues/20) | IPYNB | [fileExtensionBadCharacter.ipynb](queries/fileExtensionBadCharacter.ipynb) | **DONE**
 Misuse of Wikipedia links | WARN | [docs](https://github.com/edamontology/edamverify/blob/master/docs/wikipediaMisuse.md) | [23](https://github.com/edamontology/edamverify/issues/23) | IPYNB | [wikipediaMisuse.ipynb](queries/wikipediaMisuse.ipynb) | **DONE**
