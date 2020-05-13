@@ -30,7 +30,7 @@ class TestNotebooks(unittest.TestCase):
 
 
     @parameterized.expand([entry_path for entry_path in glob.glob(os.path.join("queries","*.ipynb"))])
-    @unittest.skip("demonstrating skipping")
+    #@unittest.skip("demonstrating skipping")
     def test_all_nb(self, entry_path):
         #for nb in entry_path:
             print(f'Testing {entry_path}')
