@@ -25,6 +25,7 @@ install:
   - conda activate test-environment
 
 script:
+  - export EDAM_PATH=/home/travis/build/edamontology/edamontology/EDAM_dev.owl
   - nose2 --with-coverage --verbose
 
 notifications:
