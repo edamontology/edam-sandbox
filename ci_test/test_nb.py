@@ -43,7 +43,11 @@ class TestNotebooks(unittest.TestCase):
                 edam_test_output = nb['cells'][-1]['outputs'][0]['text']
                 out = json.loads(edam_test_output)
                 print()
-                print(f"test name: {out['test_name']}\nstatus: {out['status']}\nreason: {['\n-'.join(out['reason'])}")
+                print(f"test name: {out['test_name']})
+                print(f"status: {out['status']}")
+                print(f"messages:")
+                for line in out['reason']:
+                    print(f"- {line}")
                 self.assertNotEquals(out['status'], "ERROR")
 
 
