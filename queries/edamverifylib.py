@@ -40,8 +40,8 @@ class EdamReport:
     def reportWriteMd(self):
         """Print an error report in GitHub md format"""
         print("#", self.testname)
+        print("**STATUS**: ", self.status, "\n")
         print(self.comment)
-        print("**STATUS**: ", self.status)
         for a_reason in self.reason:
             print("* ", a_reason)
 
