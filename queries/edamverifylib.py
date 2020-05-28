@@ -50,15 +50,15 @@ class EdamReport:
         print(json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4))
 
         # Explanation of above code.
-        # "default=" specifies the serialisation function - it's required for objects such as EdamReport that can't otherwise be serialisised.
-        # "lambda o:" defines an anonymous function (or lambda function) with a single parameter - "o"
-        # o.__dict__ is the argument to the lambda function - a dictionary of the object's (writable) attributes
-        #
-        # It's a short-hand equivalent to:
-        # report_obj = {}
-        # report_obj['test_name'] = self.testname
-        # report_obj['comment'] = self.comment
-        # report_obj['status'] = self.status
-        # report_obj['reason'] = self.reason
-        # report_json = json.dumps(report_obj, indent=4)
+        #         # "default=" specifies the serialisation function - it's required for objects such as EdamReport that can't otherwise be serialisised.
+        #         # "lambda o:" defines an anonymous function (or lambda function) with a single parameter - "o"
+        #         # o.__dict__ is the argument to the lambda function - a dictionary of the object's (writable) attributes
+        #         #
+        #         # It's a short-hand equivalent to:
+        #         # report_obj = {}
+        #         # report_obj['test_name'] = self.testname
+        #         # report_obj['comment'] = self.comment
+        #         # report_obj['status'] = self.status
+        #         # report_obj['reason'] = self.reason
+        #         # report_json = json.dumps(report_obj, indent=4)
         # print(report_json)
