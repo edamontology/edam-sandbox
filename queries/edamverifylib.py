@@ -39,6 +39,13 @@ class EdamReport:
 
     def reportWriteMd(self):
         """Print an error report in GitHub md format"""
+        # Example:
+        # # annotationDeprecationMisuse
+        # ** STATUS **: WARN
+        # Invalid properties found for one or more non - obsolete concepts.
+        # * Invalid < oldParent > property in http: // edamontology.org / data_0849(Sequence record)
+        # * Invalid < deprecation_comment > property in http: // edamontology.org / data_0870(Sequence distance matrix)
+
         print("#", self.testname)
         print("**STATUS**: ", self.status, "\n")
         print(self.comment)
@@ -47,6 +54,16 @@ class EdamReport:
 
     def reportWriteJson(self):
         """Print an error report in JSON format"""
+        # Example:
+        # {
+        #     "testname": "annotationDeprecationMisuse",
+        #     "status": "WARN",
+        #     "comment": "Invalid properties found for one or more non-obsolete concepts.",
+        #     "reason": [
+        #         "Invalid <oldParent> property in http://edamontology.org/data_0849 (Sequence record)",
+        #         "Invalid <deprecation_comment> property in http://edamontology.org/data_0870 (Sequence distance matrix)",
+        #               ]
+        # }
         print(json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4))
 
         # Explanation of above code.
@@ -62,3 +79,16 @@ class EdamReport:
         #         # report_obj['reason'] = self.reason
         #         # report_json = json.dumps(report_obj, indent=4)
         # print(report_json)
+
+        report_obj = edamverifylib.EdamReport(
+            'annotationDeprecationMisuse',
+            'Invalid properties found for one or more non-obsolete concepts.',
+            status,
+            report
+        )
+
+        print("GitHub Markdown-format output:")
+        report_obj.reportWriteMd()
+
+        print("\nJSON-format output:")
+        report_obj.reportWriteJson()
