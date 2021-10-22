@@ -4,7 +4,7 @@ WARN	annotation_whitespace
 ERROR	deprecated_boolean_datatype
 ERROR	deprecated_class_reference
 ERROR	deprecated_property_reference
-ERROR	duplicate_label
+WARN	duplicate_label
 WARN	duplicate_scoped_synonym
 INFO	invalid_xref
 ERROR	label_formatting
