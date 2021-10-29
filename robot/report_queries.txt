@@ -6,7 +6,6 @@ ERROR	deprecated_class_reference
 ERROR	deprecated_property_reference
 WARN	duplicate_label
 WARN	duplicate_scoped_synonym
-INFO	invalid_xref
 ERROR	label_formatting
 WARN	label_whitespace
 ERROR	missing_label
@@ -16,5 +15,4 @@ WARN	missing_subset_declaration
 INFO	missing_superclass
 ERROR	misused_replaced_by
 ERROR	multiple_definitions
-WARN	multiple_equivalent_class_definitions --> /!\ definition property 
 ERROR	multiple_labels
