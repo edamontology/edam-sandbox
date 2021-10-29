@@ -1,4 +1,4 @@
-ERROR	file:./missing_definition.rq
+ERROR	file:./missing_or_2_definition.rq
 WARN	file:./missing_wikipedia_link.rq
 WARN	annotation_whitespace
 ERROR	deprecated_boolean_datatype
@@ -15,4 +15,5 @@ WARN	missing_subset_declaration
 INFO	missing_superclass
 ERROR	misused_replaced_by
 ERROR	multiple_definitions
+WARN	multiple_equivalent_class_definitions --> /!\ definition property 
 ERROR	multiple_labels

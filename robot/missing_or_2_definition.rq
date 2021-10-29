@@ -5,7 +5,14 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 
 SELECT DISTINCT ?entity ?property ?value WHERE {
-  VALUES ?property { obo:IAO_0000115 }
+  
+  {
+        ?entity oboInOwl:hasDefinition ?def1 .
+        ?entity oboInOwl:hasDefinition ?def2 .
+        FILTER (?def1 != ?def2) .
+  }
+  UNION
+  {VALUES ?property { obo:IAO_0000115 }
   ?entity ?any ?o
   FILTER NOT EXISTS { ?entity ?property ?value }
   FILTER NOT EXISTS { ?entity oboInOwl:hasDefinition ?elucidation }
@@ -26,5 +33,6 @@ SELECT DISTINCT ?entity ?property ?value WHERE {
     FILTER (?prop2 != owl:inverseOf)
   }
   FILTER (!isBlank(?entity)) }
+  }
 ORDER BY ?entity
 
