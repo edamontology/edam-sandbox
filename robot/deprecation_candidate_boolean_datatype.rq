@@ -11,7 +11,7 @@ SELECT DISTINCT ?entity ?property ?value WHERE {
     edam:is_deprecation_candidate
   }
   ?entity ?property ?value .
-  FILTER (datatype(?value) != xsd:boolean)
+  FILTER (?value NOT IN ("true", "false"))
   FILTER (!isBlank(?entity))
 }
 ORDER BY ?entity
