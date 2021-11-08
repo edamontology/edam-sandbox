@@ -1,7 +1,10 @@
 ERROR	file:./missing_or_2_definition.rq
 WARN	file:./missing_wikipedia_link.rq
+ERROR	file:./concept_id_inferior_to_next_id.rq
+WARN	file:./deprecation_candidate_boolean_datatype.rq
+WARN	file:./notRecommendedForAnnotation_boolean_datatype.rq
+WARN	file:./deprecated_boolean_datatype.rq
 WARN	annotation_whitespace
-ERROR	deprecated_boolean_datatype
 ERROR	deprecated_class_reference
 ERROR	deprecated_property_reference
 WARN	duplicate_label
