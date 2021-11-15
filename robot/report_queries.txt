@@ -6,6 +6,7 @@ ERROR	file:./concept_id_inferior_to_next_id.rq
 WARN	annotation_whitespace
 ERROR	deprecated_class_reference
 ERROR	deprecated_property_reference
+ERROR	duplicate_definition
 WARN	duplicate_scoped_synonym
 ERROR	illegal_use_of_built_in_vocabulary
 ERROR	label_formatting
