@@ -12,7 +12,7 @@ SELECT DISTINCT ?entity ?property ?value WHERE {
         FILTER (?def1 != ?def2) .
   }
   UNION
-  {VALUES ?property { obo:IAO_0000115 }
+  {VALUES ?property { oboInOwl:hasdefinition }
   ?entity ?any ?o
   FILTER NOT EXISTS { ?entity ?property ?value }
   FILTER NOT EXISTS { ?entity oboInOwl:hasDefinition ?elucidation }
