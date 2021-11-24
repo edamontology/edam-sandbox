@@ -28,7 +28,10 @@ class TestNotebooks(unittest.TestCase):
                 ep = ExecutePreprocessor(timeout=600, kernel_name='python3')
                 ep.preprocess(nb, {'metadata': {'path': '.'}})
 
-                edam_test_output = nb['cells'][-1]['outputs'][0]['text']
+                for cells in reversed(nb['cells']) :
+                     if cells['outputs'] :
+                         edam_test_output = cells['outputs'][0]['text']
+                         break 
                 print(edam_test_output)
                 #out = json.loads(edam_test_output)
                 #print(f"test name: {out['test_name']}\nstatus: {out['status']}\nreason: {out['reason']}")
