@@ -12,6 +12,7 @@ ERROR	illegal_use_of_built_in_vocabulary
 ERROR	label_formatting
 WARN	label_whitespace
 ERROR	missing_label
+INFO	missing_ontology_description
 INFO	missing_ontology_title
 WARN	missing_subset_declaration
 INFO	missing_superclass
