@@ -7,9 +7,9 @@ PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 SELECT DISTINCT ?entity ?property ?value WHERE {
   
   {
-        ?entity oboInOwl:hasDefinition ?def1 .
-        ?entity oboInOwl:hasDefinition ?def2 .
-        FILTER (?def1 != ?def2) .
+       VALUES ?property { oboInOwl:hasDefinition }
+       ?entity ?property ?value, ?def2 .
+       FILTER (?value != ?def2) .
   }
   UNION
   {VALUES ?property { oboInOwl:hasdefinition }
