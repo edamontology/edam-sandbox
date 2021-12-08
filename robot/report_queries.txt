@@ -3,6 +3,8 @@ WARN	file:./notRecommendedForAnnotation_boolean_datatype.rq
 ERROR	file:./concept_id_inferior_to_next_id.rq
 ERROR	file:./missing_or_2_definition.rq
 ERROR	file:./duplicate_definition.rq
+ERROR	file:./missing_superclass.rq
+WARN	file:./misused_replaced_by.rq
 WARN	annotation_whitespace
 ERROR	deprecated_boolean_datatype
 ERROR	deprecated_class_reference
@@ -16,7 +18,6 @@ INFO	missing_ontology_description
 INFO	missing_ontology_license
 INFO	missing_ontology_title
 WARN	missing_subset_declaration
-INFO	missing_superclass
 ERROR	misused_replaced_by
 ERROR	multiple_definitions
 WARN	multiple_equivalent_class_definitions --> /!\ definition property 
