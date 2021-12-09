@@ -14,7 +14,7 @@ SELECT DISTINCT ?entity ?property ?value WHERE {
        FILTER (!isBlank(?entity))
   }
   UNION
-  {VALUES ?property { oboInOwl:hasdefinition }
+  {VALUES ?property { oboInOwl:hasDefinition }
   ?entity ?any ?o
   FILTER NOT EXISTS { ?entity ?property ?value }
   FILTER NOT EXISTS { ?entity oboInOwl:hasDefinition ?elucidation }
