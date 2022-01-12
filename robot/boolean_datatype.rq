@@ -7,31 +7,12 @@ PREFIX edam:<http://edamontology.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT DISTINCT ?entity ?property ?value WHERE {
-{  VALUES ?property {
-    edam:is_deprecation_candidate
-    edam:is_refactor_candidate
-    edam:isdebtag
-    edam:notRecommendedForAnnotation
+  VALUES ?property {
     owl:deprecated
   }
   ?entity ?property ?value .
-  FILTER (datatype(?value) != xsd:boolean)
+  FILTER (datatype(?value) != xsd:boolean || str(?value) != 'true' )  
   FILTER (!isBlank(?entity))
-}
-UNION
-{
-VALUES ?property {
-    edam:is_deprecation_candidate
-    edam:is_refactor_candidate
-    edam:isdebtag
-    edam:notRecommendedForAnnotation
-    owl:deprecated
-  }
-  ?entity ?property ?value .
-  FILTER NOT EXISTS { ?entity ?property true }
-  FILTER (!isBlank(?entity))
-}
-
 }
 ORDER BY ?entity
 
