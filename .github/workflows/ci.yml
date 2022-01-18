@@ -1,0 +1,34 @@
+name: CI
+
+on:
+   [push, pull_request, workflow_dispatch]
+
+jobs:
+  
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      
+    - uses: actions/checkout@v2
+
+    - name: Set up 
+      run: |
+        git clone https://github.com/edamontology/edamontology.git
+    - name: run reason
+      run: |
+        export PATH=/home/runner/work/edamontology/edamontology/edamverify/robot:$PATH
+        robot reason --reasoner ELK   --input edamontology/EDAM_dev.owl -v 
+    - name: run report 
+      run: |
+        pwd 
+        cd robot/
+        export PATH=:/home/runner/work/edamontology/edamontology/edamverify/robot:$PATH
+        robot report --input ../edamontology/EDAM_dev.owl --output report_profile.tsv --profile report_queries.txt
+    - name: Archive Robot report tests
+      if: always()
+      uses: actions/upload-artifact@v2
+      with:
+        name: robot_report_profile
+        path: edamverify/robot/report_profile.tsv
