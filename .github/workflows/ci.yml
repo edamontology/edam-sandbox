@@ -19,13 +19,13 @@ jobs:
     - name: run reason
       run: |
         pwd
-        export PATH=/home/runner/work/edamontology/edamontology/edamverify/robot:$PATH
+        export PATH=/home/runner/work/edamverify/edamverify/robot:$PATH
         robot reason --reasoner ELK   --input edamontology/EDAM_dev.owl -v 
     - name: run report 
       run: |
         pwd 
         cd robot/
-        export PATH=:/home/runner/work/edamontology/edamontology/edamverify/robot:$PATH
+        export PATH=:/home/runner/work/edamverify/edamverify/robot:$PATH
         robot report --input ../edamontology/EDAM_dev.owl --output report_profile.tsv --profile report_queries.txt
     - name: Archive Robot report tests
       if: always()
