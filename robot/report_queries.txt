@@ -8,6 +8,7 @@ WARN	file:./formating.rq
 WARN	annotation_whitespace
 ERROR	deprecated_class_reference
 ERROR	deprecated_property_reference
+WARN	duplicate_exact_synonym
 WARN	duplicate_scoped_synonym
 ERROR	illegal_use_of_built_in_vocabulary
 ERROR	label_formatting
