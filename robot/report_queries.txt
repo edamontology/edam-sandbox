@@ -19,7 +19,6 @@ INFO	missing_ontology_description
 INFO	missing_ontology_license
 INFO	missing_ontology_title
 WARN	missing_subset_declaration
-ERROR	misused_replaced_by
 WARN	multiple_equivalent_classes
 WARN	multiple_equivalent_class_definitions 
 ERROR	multiple_labels
