@@ -24,7 +24,7 @@ jobs:
       run: |
         cd robot/
         export PATH=:/home/runner/work/edamverify/edamverify/robot:$PATH
-        robot report --input ../edamontology/EDAM_dev.owl --output report_profile.tsv --profile report_queries.txt
+        robot report --input ../edamontology/EDAM_dev.owl --output report_profile.tsv --profile report_queries.txt -v
     - name: Archive Robot report tests
       if: always()
       uses: actions/upload-artifact@v2
