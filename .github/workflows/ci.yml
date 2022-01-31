@@ -24,7 +24,7 @@ jobs:
       run: |
         cd robot/
         export PATH=:/home/runner/work/edamverify/edamverify/robot:$PATH
-        robot report --input ../edamontology/EDAM_dev.owl --output report_profile.tsv --profile report_queries.tx
+        robot report --input ../edamontology/EDAM_dev.owl --output report_profile.tsv --profile report_queries.txt
         more report_profile.tsv
         
     - name: Archive Robot report tests
