@@ -16,6 +16,9 @@ class TestStringMethods(unittest.TestCase):
         with self.assertRaises(TypeError):
             s.split(2)
 
+    def test_failure(self):
+        self.fail()
+
 
 if __name__ == "__main__":
     unittest.main()
