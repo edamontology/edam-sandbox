@@ -19,6 +19,9 @@ class TestStringMethods(unittest.TestCase):
     def test_success(self):
         assert True
 
+    def test_success_2(self):
+        assert True
+
 
 if __name__ == "__main__":
     unittest.main()
