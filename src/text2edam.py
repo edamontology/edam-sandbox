@@ -97,8 +97,8 @@ def get_edam_top_10(l, index):
     for label in index.keys():
         top[label] = jellyfish.jaro_winkler(l.lower(), label.lower())
 
-    sorted_hits = dict(sorted(top.items(), key=lambda item: item[1]))
-    top_10 = {k: sorted_hits[k] for k in list(sorted_hits)[-9:]}
+    sorted_hits = dict(sorted(top.items(), key=lambda item: item[1], reverse=True))
+    top_10 = {k: sorted_hits[k] for k in list(sorted_hits)[:10]}
 
     return top_10
 
