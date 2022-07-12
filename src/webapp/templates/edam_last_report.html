@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+{% include 'nav.html' %}
+{% endblock %}
+
+{% block body %}
+
+<!-- <h1 class="title">Last found errors in the EDAM ontology</h1>
+<p>{% for r in output_edamci %}
+    <p>{{r}}</p>
+{% endfor %}
+</p> -->
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Level</th>
+        <th>Label</th>
+        <th>Debug Message</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for r in output_edamci %}
+        {% if r["Level"] == "ERROR" %}
+            <tr class="has-background-warning">
+        {% elif r["Level"] == "ESSENTIAL" %}
+            <tr class="has-background-danger">
+        {% else %}
+            <tr>
+        {% endif %}        
+                <th>{{r[""]}}</th>
+                <td>{{r["Level"]}}</td>
+                <td><a href='{{r["Entity"]}}'>{{r["Label"]}}</a></td>
+                <td>{{r["Debug Message"]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

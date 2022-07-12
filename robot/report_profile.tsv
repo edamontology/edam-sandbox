@@ -1,0 +1,36 @@
+Level	Rule Name	Subject	Property	Value
+ERROR	duplicate_definition	http://edamontology.org/format_2183	oboInOwl:hasDefinition	XML format for EMBL entries.
+ERROR	duplicate_definition	http://edamontology.org/format_2184	oboInOwl:hasDefinition	XML format for EMBL entries.
+ERROR	duplicate_definition	http://edamontology.org/format_2185	oboInOwl:hasDefinition	XML format for EMBL entries.
+ERROR	duplicate_definition	http://edamontology.org/topic_3173	oboInOwl:hasDefinition	The study of the epigenetic modifications of a whole cell, tissue, organism etc.
+ERROR	duplicate_definition	http://edamontology.org/topic_3974	oboInOwl:hasDefinition	The study of the epigenetic modifications of a whole cell, tissue, organism etc.
+ERROR	duplicate_definition	http://edamontology.org/data_2316	oboInOwl:hasDefinition	The name of a cell line.
+ERROR	duplicate_definition	http://edamontology.org/data_2317	oboInOwl:hasDefinition	The name of a cell line.
+ERROR	duplicate_definition	http://edamontology.org/data_2318	oboInOwl:hasDefinition	The name of a cell line.
+ERROR	duplicate_definition	http://edamontology.org/data_2319	oboInOwl:hasDefinition	The name of a cell line.
+ERROR	duplicate_definition	http://edamontology.org/data_2320	oboInOwl:hasDefinition	The name of a cell line.
+ERROR	duplicate_definition	http://edamontology.org/format_3281	oboInOwl:hasDefinition	The A2M format is used as the primary format for multiple alignments of protein or nucleic-acid sequences in the SAM suite of tools. It is a small modification of FASTA format for sequences and is compatible with most tools that read FASTA.
+ERROR	duplicate_definition	http://edamontology.org/format_3811	oboInOwl:hasDefinition	The A2M format is used as the primary format for multiple alignments of protein or nucleic-acid sequences in the SAM suite of tools. It is a small modification of FASTA format for sequences and is compatible with most tools that read FASTA.
+ERROR	duplicate_definition	http://edamontology.org/data_2752	oboInOwl:hasDefinition	Identifier of an entry from the GlycosciencesDB database.
+ERROR	duplicate_definition	http://edamontology.org/data_2796	oboInOwl:hasDefinition	Identifier of an entry from the GlycosciencesDB database.
+ERROR	duplicate_definition	http://edamontology.org/data_2379	oboInOwl:hasDefinition	Identifier of a strain of an organism variant, typically a plant, virus or bacterium.
+ERROR	duplicate_definition	http://edamontology.org/data_2912	oboInOwl:hasDefinition	Identifier of a strain of an organism variant, typically a plant, virus or bacterium.
+ERROR	duplicate_definition	http://edamontology.org/format_3975	oboInOwl:hasDefinition	Graphical Fragment Assembly captures sequence graphs as the product of an assembly, a representation of variation in genomes, splice graphs in genes, or even overlap between reads from long-read sequencing technology.
+ERROR	duplicate_definition	http://edamontology.org/format_3976	oboInOwl:hasDefinition	Graphical Fragment Assembly captures sequence graphs as the product of an assembly, a representation of variation in genomes, splice graphs in genes, or even overlap between reads from long-read sequencing technology.
+ERROR	duplicate_definition	http://edamontology.org/format_1996	oboInOwl:hasDefinition	EMBOSS simple sequence pair alignment format.
+ERROR	duplicate_definition	http://edamontology.org/format_3330	oboInOwl:hasDefinition	EMBOSS simple sequence pair alignment format.
+ERROR	duplicate_definition	http://edamontology.org/operation_0450	oboInOwl:hasDefinition	Detects chimeric sequences (chimeras) from a sequence alignment.
+ERROR	duplicate_definition	http://edamontology.org/operation_3918	oboInOwl:hasDefinition	Detects chimeric sequences (chimeras) from a sequence alignment.
+ERROR	duplicate_definition	http://edamontology.org/format_1919	oboInOwl:hasDefinition	Data format for a molecular sequence record.
+ERROR	duplicate_definition	http://edamontology.org/format_2551	oboInOwl:hasDefinition	Data format for a molecular sequence record.
+ERROR	duplicate_definition	http://edamontology.org/format_2552	oboInOwl:hasDefinition	Data format for a molecular sequence record.
+ERROR	duplicate_definition	http://edamontology.org/data_2101	oboInOwl:hasDefinition	An identifier of a software end-user (typically a person).
+ERROR	duplicate_definition	http://edamontology.org/data_2118	oboInOwl:hasDefinition	An identifier of a software end-user (typically a person).
+ERROR	duplicate_definition	http://edamontology.org/data_2749	oboInOwl:hasDefinition	An identifier of a particular genome.
+ERROR	duplicate_definition	http://edamontology.org/data_2751	oboInOwl:hasDefinition	An identifier of a particular genome.
+ERROR	duplicate_definition	http://edamontology.org/data_2785	oboInOwl:hasDefinition	An accession of annotation on a (group of) viruses (catalogued in a database).
+ERROR	duplicate_definition	http://edamontology.org/data_2913	oboInOwl:hasDefinition	An accession of annotation on a (group of) viruses (catalogued in a database).
+ERROR	duplicate_definition	http://edamontology.org/data_1141	oboInOwl:hasDefinition	Accession number of an entry (family) from the TIGRFam database.
+ERROR	duplicate_definition	http://edamontology.org/data_2731	oboInOwl:hasDefinition	Accession number of an entry (family) from the TIGRFam database.
+ERROR	duplicate_definition	http://edamontology.org/data_2531	oboInOwl:hasDefinition	A human-readable collection of information about about how a scientific experiment or analysis was carried out that results in a specific set of data or results used for further analysis or to test a specific hypothesis.
+ERROR	duplicate_definition	http://edamontology.org/data_3914	oboInOwl:hasDefinition	A human-readable collection of information about about how a scientific experiment or analysis was carried out that results in a specific set of data or results used for further analysis or to test a specific hypothesis.

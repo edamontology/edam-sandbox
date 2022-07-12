@@ -32,9 +32,27 @@ def edam_stats():
 def edam_validation():
     return render_template('index.html')
 
+
+class EdamTest:
+    Number=0
+    Level=''
+    TestName=''
+    Entity=''
+    Label=''
+    DebugMessage=''
+
 @app.route('/edam_last_report')
 def edam_last_report():
-    return render_template('index.html')
+    
+    # robot report
+    
+    # edam ci report
+    with open("test_data/output_edamci.tsv") as file:
+        output_edamci = csv.DictReader(file, delimiter="\t")
+        edam_output_list = []
+        for row in output_edamci:
+            edam_output_list.append(row)
+    return render_template('edam_last_report.html', output_edamci=edam_output_list)
 
 @app.route('/quick_curation')
 def quick_curation():
