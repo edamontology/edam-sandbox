@@ -88,9 +88,6 @@ def edam_stats():
     res = get_edam_numbers(g)
     res_last = get_edam_numbers(g_last_stable)
 
-    print(res['nb_formats'])
-    print(res_last['nb_formats'])
-
     return render_template('stats.html', 
         topics = res['nb_topics'], 
         operations = res['nb_topics'], 
