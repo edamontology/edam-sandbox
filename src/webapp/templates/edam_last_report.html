@@ -19,22 +19,38 @@
         <th>Level</th>
         <th>Label</th>
         <th>Debug Message</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
-        {% for r in output_edamci %}
-        {% if r["Level"] == "ERROR" %}
-            <tr class="has-background-warning">
-        {% elif r["Level"] == "ESSENTIAL" %}
-            <tr class="has-background-danger">
-        {% else %}
-            <tr>
-        {% endif %}        
-                <th>{{r[""]}}</th>
-                <td>{{r["Level"]}}</td>
-                <td><a href='{{r["Entity"]}}'>{{r["Label"]}}</a></td>
-                <td>{{r["Debug Message"]}}</td>
-            </tr>
+        {% for r in output_edamci_list %}
+            {% if r["Level"] == "ESSENTIAL" %}
+                <tr class="has-background-warning">
+            {% elif r["Level"] == "ERROR" %}
+                <tr class="has-background-danger">
+            {% else %}
+                <tr>
+            {% endif %}        
+                    <th>{{r["Number"]}}</th>
+                    <td>{{r["Level"]}}</td>
+                    <td><a href='{{r["Entity"]}}'>{{r["Label"]}}</a></td>
+                    <td>{{r["Debug Message"]}}</td>
+                </tr>
+        {% endfor %}
+        {% for r in robot_output_list %}
+            {% if r["Level"] == "ERROR" %}
+                <tr class="has-background-warning">
+            {% elif r["Level"] == "WARN" %}
+                <tr class="has-background-danger">
+            {% else %}
+                <tr>
+            {% endif %}        
+                    <th>{{r["Number"]}}</th>
+                    <td>{{r["Level"]}}</td>
+                    <td><a href='{{r["Subject"]}}'>{{r["Label"]}}</a></td>
+                    <td>{{r["Rule Name"]}} on value {{r["Value"]}}</td>
+                    <td>Robot</td>
+                </tr>
         {% endfor %}
     </tbody>
 </table>

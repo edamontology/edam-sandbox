@@ -30,7 +30,7 @@ for r in results :
     #print(f"{r['label']} is identified in EDAM with concept {r['x']}") 
     idx_uri[str(r['x'])] = str(r['label'])
     idx_label[str(r['label'])] = str(r['x'])
- 
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -60,27 +60,28 @@ def edam_stats():
 def edam_validation():
     return render_template('index.html')
 
-
-class EdamTest:
-    Number=0
-    Level=''
-    TestName=''
-    Entity=''
-    Label=''
-    DebugMessage=''
-
 @app.route('/edam_last_report')
 def edam_last_report():
-    
-    # robot report
-    
+    number=0
     # edam ci report
     with open("test_data/output_edamci.tsv") as file:
         output_edamci = csv.DictReader(file, delimiter="\t")
-        edam_output_list = []
+        edamci_output_list = []
         for row in output_edamci:
-            edam_output_list.append(row)
-    return render_template('edam_last_report.html', output_edamci=edam_output_list)
+            row["Number"]=number
+            number+=1
+            edamci_output_list.append(row)
+        # robot report
+    with open("test_data/report_profile.tsv") as file:
+        robot_output = csv.DictReader(file, delimiter="\t")
+        robot_output_list = []
+        for row in robot_output:
+            row["Label"]=idx_uri[row["Subject"]]
+            row["Number"]=number
+            number+=1
+            robot_output_list.append(row)    
+
+    return render_template('edam_last_report.html', output_edamci_list=edamci_output_list, robot_output_list=robot_output_list)
 
 @app.route('/quick_curation')
 def quick_curation():
