@@ -16,6 +16,21 @@ g.load('https://raw.githubusercontent.com/edamontology/edamontology/master/EDAM_
 g.bind('edam', Namespace('http://edamontology.org/'))
 print(str(len(g)) + ' triples in the EDAM triple store')
 
+## Build an index to retrieve term labels 
+idx_label = {}
+idx_uri = {}
+idx_query = """
+SELECT ?x ?label WHERE {
+    ?x rdf:type owl:Class ; 
+       rdfs:label ?label .
+}
+"""
+results = g.query(idx_query)
+for r in results :
+    #print(f"{r['label']} is identified in EDAM with concept {r['x']}") 
+    idx_uri[str(r['x'])] = str(r['label'])
+    idx_label[str(r['label'])] = str(r['x'])
+ 
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -26,7 +41,20 @@ def expert_curation():
 
 @app.route('/edam_stats')
 def edam_stats():
-    return render_template('index.html')
+
+    idx_query = """
+    SELECT ?x ?label WHERE {
+    ?x rdf:type owl:Class ; 
+       rdfs:label ?label .
+    }
+    """
+    results = g.query(idx_query)
+    for r in results :
+        #print(f"{r['label']} is identified in EDAM with concept {r['x']}") 
+        idx_uri[str(r['x'])] = str(r['label'])
+        idx_label[str(r['label'])] = str(r['x'])
+
+    return render_template('stats.html')
     
 @app.route('/edam_validation')
 def edam_validation():
