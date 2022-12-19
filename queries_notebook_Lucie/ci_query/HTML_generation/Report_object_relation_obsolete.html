@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EDAM ontology development dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+</head>
+
+<body>
+<div class="columns">
+
+    <div class="column is-one-quarter">
+        <section class="section"> 
+                                                            <!--TO CHANGE-->
+                                                             
+            <h1>Object relation obsolete</h1>     
+        </section>
+    </div>
+    <div class="column is-full ">
+        <section class="section">
+                                                             <!--TO CHANGE-->
+                                                             
+            <text> Description : checks that the relation between concept are not pointing towards obsolete concepts.</text>   
+        <br></br>
+        </section>
+    </div>
+
+    
+    
+    
+    <div class="column">
+        <section class="section">
+        
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Entity</th>
+                  <th>Label</th>
+                  <th>Debug message</th>
+                </tr>
+              </thead>
+              <tbody>
+                    
+                    <tr>
+                    <td>http://edamontology.org/data_0582</td>
+                    <td> "Ontology"</td>
+                                                               <!--TO CHANGE-->
+
+                    <td> is related (http://edamontology.org/has_topic) with http://edamontology.org/topic_3544, which is a deprecated concept.</td> 
+                    </tr>
+                    
+                    <tr>
+                    <td>http://edamontology.org/data_2663</td>
+                    <td> "Carbohydrate identifier"</td>
+                                                               <!--TO CHANGE-->
+
+                    <td> is related (http://edamontology.org/is_identifier_of) with http://edamontology.org/data_0007, which is a deprecated concept.</td> 
+                    </tr>
+                    
+
+              </table>
+        </section>
+    </div>
+    
+  
+    
+</div>
+</body>
+</html>

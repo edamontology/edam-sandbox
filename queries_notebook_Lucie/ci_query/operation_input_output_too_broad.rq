@@ -1,0 +1,21 @@
+#Query aim = “  check operation input and output property were not too broad (root concept)”
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX edam:<http://edamontology.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?id ?term ?property  WHERE {
+     VALUES ?property { edam:has_output
+                        edam:has_input }
+    ?id rdfs:subClassOf+ <http://edamontology.org/operation_0004> .
+    ?id rdfs:label ?term .
+    ?id rdfs:subClassOf ?restriction . 
+        ?restriction rdf:type owl:Restriction ; 
+                 owl:onProperty ?property  ; 
+                 owl:someValuesFrom edam:data_0006 .
+    
+}
+
