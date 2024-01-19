@@ -6,3 +6,4 @@ cy_test/__pycache__/*
 
 **/.DS_Store
 **/.coverage
+ci_test/.gitignore
