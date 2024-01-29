@@ -13,12 +13,12 @@ ns = {"dc": "http://dcterms/",
       }
 
 g = ConjunctiveGraph()
-g.load('https://raw.githubusercontent.com/edamontology/edamontology/master/EDAM_dev.owl', format='xml')
+g.parse('https://raw.githubusercontent.com/edamontology/edamontology/master/EDAM_dev.owl', format='xml')
 g.bind('edam', Namespace('http://edamontology.org/'))
 print(str(len(g)) + ' triples in the EDAM triple store')
 
 g_last_stable = ConjunctiveGraph()
-g_last_stable.load('http://edamontology.org/EDAM.owl', format='xml')
+g_last_stable.parse('http://edamontology.org/EDAM.owl', format='xml')
 
 ## Build an index to retrieve term labels 
 idx_label = {}
@@ -37,11 +37,25 @@ for r in results :
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    res = get_edam_numbers(g)
+    res_last = get_edam_numbers(g_last_stable)
+
+    return render_template('index.html',
+                           topics=res['nb_topics'],
+                           operations=res['nb_operations'],
+                           data=res['nb_data'],
+                           formats=res['nb_formats'],
+                           new_topics=res['nb_topics'] - res_last['nb_topics'],
+                           new_operations=res['nb_operations'] - res_last['nb_operations'],
+                           new_data=res['nb_data'] - res_last['nb_data'],
+                           new_formats=res['nb_formats'] - res_last['nb_formats']
+                           )
 
 @app.route('/expert_curation')
 def expert_curation():
-    return render_template('index.html')
+    # 1. select a topic
+    # 2. select topic-specific curation actions (subclasses of the identified topic)
+    return render_template('expert_curation.html')
 
 def get_edam_numbers(g):
     query_op = """
@@ -90,13 +104,13 @@ def edam_stats():
 
     return render_template('stats.html', 
         topics = res['nb_topics'], 
-        operations = res['nb_topics'], 
-        data = res['nb_topics'], 
-        format = res['nb_topics'], 
+        operations = res['nb_operations'],
+        data = res['nb_data'],
+        formats = res['nb_formats'],
         new_topics = res['nb_topics'] - res_last['nb_topics'], 
         new_operations = res['nb_operations'] - res_last['nb_operations'], 
         new_data = res['nb_data'] - res_last['nb_data'], 
-        new_formats = res['nb_formats'] - res_last['nb_formats'], 
+        new_formats = res['nb_formats'] - res_last['nb_formats']
         )
     
 @app.route('/edam_validation')
@@ -147,7 +161,7 @@ def quick_curation():
         count_no_wikipedia = str(r["nb_no_wikipedia"])
 
     #########
-    q_no_publication_entries = """
+    q_no_wikipedia_all = """
         SELECT ?c ?term WHERE {
             ?c rdfs:subClassOf+ edam:topic_0003 ; 
                 rdfs:label ?term .
@@ -158,7 +172,7 @@ def quick_curation():
             } .
         }
         """
-    results = g.query(q_no_publication_entries, initNs=ns)
+    results = g.query(q_no_wikipedia_all, initNs=ns)
     no_wikipedia = []
     for r in results:
         no_wikipedia.append({"term": r["term"], "class": r["c"]})

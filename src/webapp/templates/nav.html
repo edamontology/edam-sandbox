@@ -1,16 +1,17 @@
 <aside class="menu">
     <ul class="menu-list">
         <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('index') }}">Visualizations</a></li>
     </ul>
-    <p class="menu-label">Contributors</p>
+    <p class="menu-label">I'm a contributor</p>
     <ul class="menu-list">
         <li><a href="{{ url_for('quick_curation') }}">Quick curation</a></li>
         <li><a href="{{ url_for('expert_curation') }}">In my field</a></li>
     </ul>
-    <p class="menu-label">Developers</p>
+    <p class="menu-label">I'm a developers</p>
     <ul class="menu-list">
-        <li><a href="{{ url_for('edam_stats') }}">Statistics</a></li>
-        <li><a href="{{ url_for('edam_validation') }}">Online validation</a></li>
+<!--        <li><a href="{{ url_for('edam_stats') }}">Statistics</a></li>-->
+<!--        <li><a href="{{ url_for('edam_validation') }}">Online validation</a></li>-->
         <li><a href="{{ url_for('edam_last_report') }}">Last validation report</a></li>
     </ul>
 </aside>
