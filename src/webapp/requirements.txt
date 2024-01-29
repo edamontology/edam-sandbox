@@ -3,6 +3,6 @@ rdflib
 sparqlwrapper
 jupyter
 pandas
-seaborn
+# seaborn
 
 
