@@ -1,7 +1,6 @@
 import csv
 from flask import Flask, redirect, url_for, request, render_template
 import random
-import nbformat
 
 from rdflib import ConjunctiveGraph, Namespace
 
