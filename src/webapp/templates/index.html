@@ -9,64 +9,126 @@
 <h1 class="title">Welcome to the EDAM ontology dashboard</h1>
 
 <section class="section">
-    <h2 class="subtitle">EDAM concepts</h2>
+
+    <h2 class="subtitle">The EDAM ontology</h2>
+
+        <div class="columns">
+            <div class="column is-two-thirds">
+                <div class="content">
+                    <p>
+                        EDAM is an ontology of well-established concepts relevant to life sciences, bioinformatics analyses and data management.
+                        EDAM includes 4 sub-ontologies: topics, operations, types of data and data formats, and defines their relations with one another.
+                    </p>
+
+                    <p>
+                        <button class="button is-link is-outlined"><a href="https://edamontology.org" target="_blank"> More on EDAM</a></button>
+                    </p>
+
+                    <p>
+                        The purpose of this dashboard is to facilitate collaborative efforts towards the improvement of the EDAM ontology,
+                        by identifying gaps in the current version and providing an interface for their easy integration.
+                    </p>
+                </div>
+            </div>
+            <div class="column">
+                <figure>
+                    <img src="https://edamontology.org/EDAMrelations.png" alt="Basic architecture of the EDAM ontology" width="300">
+                </figure>
+            </div>
+        </div>
+
+</section>
+
+<section class="section">
+    <h2 class="subtitle">Current state of EDAM concepts (dev version)</h2>
 
     <nav class="level is-mobile">
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">Topics</p>
-                <p class="title">{{ topics }}</p>
+        <div class="card has-text-centered">
+            <div class="card-content">
+                <div class="content">
+                    <p class="heading">
+                        <a href="https://edamontology.org/topic" class="button" target="_blank" style="width: 150px; color:white;background-color: forestgreen">Topics</a></p>
+                    <p class="title">{{ topics }}</p>
+                </div>
             </div>
         </div>
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">Operations</p>
-                <p class="title">{{ operations }}</p>
+
+        <div class="card has-text-centered">
+            <div class="card-content">
+                <div class="content">
+                    <p class="heading"><a href="https://edamontology.org/operation" class="button" target="_blank" style="width: 150px; color:white;background-color: steelblue">Operations</a></p>
+                    <p class="title">{{ operations }}</p>
+                </div>
             </div>
         </div>
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">Data</p>
-                <p class="title">{{ data }}</p>
+
+        <div class="card has-text-centered">
+            <div class="card-content">
+                <div class="content">
+                    <p class="heading">
+                        <a href="https://edamontology.org/data" class="button" target="_blank" style="width: 150px; color:white;background-color: indianred">Data</a></p>
+                    <p class="title">{{ data }}</p>
+                </div>
             </div>
         </div>
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">Format</p>
-                <p class="title">{{ formats }}</p>
+
+        <div class="card has-text-centered">
+            <div class="card-content">
+                <div class="content">
+                    <p class="heading"><a href="https://edamontology.org/format" class="button" target="_blank" style="width: 150px; color:white;background-color: coral">Formats</a></p>
+                    <p class="title">{{ formats }}</p>
+                </div>
             </div>
         </div>
+
     </nav>
 </section>
 
 <section class="section">
-    <h2 class="subtitle">From the last stable release</h2>
+    <h2 class="subtitle">From the last stable release (display number/date)</h2>
 
     <nav class="level is-mobile">
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">New topics</p>
-                <p class="title">{{ new_topics }}</p>
+
+        <div class="card has-text-centered">
+            <div class="card-content">
+                <div class="content">
+                    <p class="heading">
+                        <a href="https://edamontology.org/topic" class="button" target="_blank" style="width: 150px; background-color:white;color: forestgreen; border: 2px solid forestgreen">Topics</a></p>
+                    <p class="title">{{ new_topics }}</p>
+                </div>
             </div>
         </div>
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">New operations</p>
-                <p class="title">{{ new_operations }}</p>
+
+        <div class="card has-text-centered">
+            <div class="card-content">
+                <div class="content">
+                    <p class="heading">
+                        <a href="https://edamontology.org/operation" class="button" target="_blank" style="width: 150px; background-color:white;color: steelblue; border: 2px solid steelblue">Operations</a></p>
+                    <p class="title">{{ new_operations }}</p>
+                </div>
             </div>
         </div>
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">New data</p>
-                <p class="title">{{ new_data }}</p>
+
+        <div class="card has-text-centered">
+            <div class="card-content">
+                <div class="content">
+                    <p class="heading">
+                        <a href="https://edamontology.org/data" class="button" target="_blank" style="width: 150px; background-color:white;color: indianred; border: 2px solid indianred">Data</a></p>
+                    <p class="title">{{ new_data }}</p>
+                </div>
             </div>
         </div>
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">New format</p>
-                <p class="title">{{ new_formats }}</p>
+
+        <div class="card has-text-centered">
+            <div class="card-content">
+                <div class="content">
+                    <p class="heading">
+                        <a href="https://edamontology.org/format" class="button" target="_blank" style="width: 150px; background-color:white;color: coral; border: 2px solid coral">Formats</a></p>
+                    <p class="title">{{ new_formats }}</p>
+                </div>
             </div>
         </div>
+
     </nav>
 </section>
 
