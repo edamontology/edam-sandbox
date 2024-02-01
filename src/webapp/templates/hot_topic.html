@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+{% include 'nav.html' %}
+{% endblock %}
+
+{% block body %}
+
+<h1 class="title">Hot topics</h1>
+    <section class="section">
+        <div class="content">
+            <p>Topics or subtopics recently added or significantly expanded recently, that may need expert reviewing and completion.</p>
+        </div>
+
+
+        <h2 class="title">Genomics</h2>
+
+        <nav class="level is-mobile">
+
+            <div class="content">
+                <ul>
+                    <li>Summary of existing sub-topics, missing properties, etc</li>
+                    <li>Summary of tools tagged with this topic in bio-tools</li>
+                    <li>...</li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <section class="section">
+
+        <h2 class="title">Phylogeny</h2>
+        <nav class="level is-mobile">
+                <div class="content">
+                    <ul>
+                        <li>Summary of existing sub-topics, missing properties, etc</li>
+                        <li>Summary of tools tagged with this topic in bio-tools</li>
+                        <li>...</li>
+                    </ul>
+                </div>
+        </nav>
+    </section>
+
+
+{% endblock %}
