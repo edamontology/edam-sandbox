@@ -10,13 +10,29 @@
 <p>In this demo, we randomly pick 5 classes from the EDAM ontology that need to be curated.</p>
 
 <section class="section">
-    <h2 class="subtitle"> <span class="tag is-black">{{ count_no_wikipedia }} </span> EDAM topics with missing wikipedia
+    <h2 class="subtitle"> <span class="tag">{{ count_no_wikipedia }} </span> EDAM topics with missing wikipedia
         links. </h2>
     <div class="buttons">
         {% for item in missing_wikipedia %}
-        <a href="{{ item.class }}" class="button is-danger is-rounded" target="_blank" >{{ item.term }}</a>
+        <a href="{{ item.class }}" class="button" target="_blank" style="border-color:coral;color:coral;background-color: #FFEECC">{{ item.term }}</a>
         {% endfor %}
     </div>
+
+    <h2 class="subtitle"> <span class="tag">17 </span> EDAM topics with no synonyms. </h2>
+    <div class="buttons">
+        <a href="{{ url_for('quick_curation') }}" class="button" target="_blank" style="border-color:forestgreen;color:forestgreen;background-color: #BBFFCC">Topic A</a>
+        <a href="{{ url_for('quick_curation') }}" class="button" target="_blank" style="border-color:forestgreen;color:forestgreen;background-color: #BBFFCC">Topic B</a>
+        <a href="{{ url_for('quick_curation') }}" class="button" target="_blank" style="border-color:forestgreen;color:forestgreen;background-color: #BBFFCC">Topic C</a>
+    </div>
+
+    <h2 class="subtitle"> <span class="tag">123 </span> EDAM operations with missing input attribute(s). </h2>
+    <div class="content">
+        <a href="{{ url_for('quick_curation') }}" class="button" target="_blank" style="border-color:indianred;color:indianred;background-color: #FFCCDD">Operation X</a>
+        <a href="{{ url_for('quick_curation') }}" class="button" target="_blank" style="border-color:indianred;color:indianred;background-color: #FFCCDD">Operation Y</a>
+        <a href="{{ url_for('quick_curation') }}" class="button" target="_blank" style="border-color:indianred;color:indianred;background-color: #FFCCDD">Operation Z</a>
+
+    </div>
+
 </section>
 
 {% endblock %}
