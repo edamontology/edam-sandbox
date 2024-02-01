@@ -50,11 +50,27 @@ def index():
                            new_formats=res['nb_formats'] - res_last['nb_formats']
                            )
 
+@app.route('/current_panorama')
+def current():
+    res = get_edam_numbers(g)
+
+    return render_template('current.html',
+                           topics=res['nb_topics'],
+                           operations=res['nb_operations'],
+                           data=res['nb_data'],
+                           formats=res['nb_formats']
+                           )
+
 @app.route('/expert_curation')
 def expert_curation():
     # 1. select a topic
     # 2. select topic-specific curation actions (subclasses of the identified topic)
     return render_template('expert_curation.html')
+@app.route('/hot_topic')
+def hot_topic():
+    # 1. select a topic
+    # 2. select topic-specific curation actions (subclasses of the identified topic)
+    return render_template('hot_topic.html')
 
 def get_edam_numbers(g):
     query_op = """
