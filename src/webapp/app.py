@@ -1,6 +1,7 @@
 import csv
 from flask import Flask, redirect, url_for, request, render_template
 import random
+import os
 
 from rdflib import ConjunctiveGraph, Namespace
 
@@ -158,46 +159,109 @@ def edam_last_report():
 @app.route('/quick_curation')
 def quick_curation():
 
+    dir_queries = "./queries"
+
+    ## Get topics without a wikipedia link (WARNING)
+    query = dir_queries + "/no_wikipedia_link_topic.rq"
+    with open(query, "r") as f:
+        query = f.read()
+        results = g.query(query)
+    f.close()
+
+    no_wikipedia_link_topic = []
+    for r in results:
+        no_wikipedia_link_topic.append({"term": r["term"], "class": r["concept"]})
+
+    ## Get operations without a wikipedia link (WARNING)
+    query = dir_queries + "/no_wikipedia_link_operation.rq"
+    with open(query, "r") as f:
+        query = f.read()
+        results = g.query(query)
+    f.close()
+
+    no_wikipedia_link_operation = []
+    for r in results:
+        no_wikipedia_link_operation.append({"term": r["term"], "class": r["concept"]})
+
+    ## Get topics without any broad synonym (OPTIONAL)
+    query = dir_queries + "/no_broad_synonym_topic.rq"
+    with open(query, "r") as f:
+        query = f.read()
+        results = g.query(query)
+    f.close()
+
+    no_broad_synonym_topic = []
+    for r in results:
+        no_broad_synonym_topic.append({"term": r["term"], "class": r["concept"]})
+
+    ## Get topics without a definition (ERROR)
+    query = dir_queries + "/no_definition_topic.rq"
+    with open(query, "r") as f:
+        query = f.read()
+        results = g.query(query)
+    f.close()
+
+    no_definition_topic = []
+    for r in results:
+        no_definition_topic.append({"term": r["term"], "class": r["concept"]})
+
+    ## Get identifiers (hybrid) without a regex (WARNING)
+    query = dir_queries + "/no_regex_identifier.rq"
+    with open(query, "r") as f:
+        query = f.read()
+        results = g.query(query)
+    f.close()
+
+    no_regex_identifier = []
+    for r in results:
+        no_regex_identifier.append({"term": r["term"], "class": r["concept"]})
+
     # NO wikipedia
-    q_no_wikipedia = """
-    SELECT (count(?term) as ?nb_no_wikipedia) WHERE {
-        ?c rdfs:subClassOf+ edam:topic_0003 ; 
-                    rdfs:label ?term .
-        
-        FILTER NOT EXISTS {
-            ?c rdfs:seeAlso ?seealso .
-            FILTER (regex(str(?seealso), "wikipedia.org", "i"))  
-        } .
-    }
-    """
-    results = g.query(q_no_wikipedia, initNs=ns)
-    count_no_wikipedia = 0
-    for r in results:
-        count_no_wikipedia = str(r["nb_no_wikipedia"])
+    # q_no_wikipedia = """
+    # SELECT (count(?term) as ?nb_no_wikipedia) WHERE {
+    #     ?c rdfs:subClassOf+ edam:topic_0003 ;
+    #                 rdfs:label ?term .
+    #
+    #     FILTER NOT EXISTS {
+    #         ?c rdfs:seeAlso ?seealso .
+    #         FILTER (regex(str(?seealso), "wikipedia.org", "i"))
+    #     } .
+    # }
+    # """
+    #
+    # results = g.query(q_no_wikipedia, initNs=ns)
+    # count_no_wikipedia = 0
+    # for r in results:
+    #     count_no_wikipedia = str(r["nb_no_wikipedia"])
 
-    #########
-    q_no_wikipedia_all = """
-        SELECT ?c ?term WHERE {
-            ?c rdfs:subClassOf+ edam:topic_0003 ; 
-                rdfs:label ?term .
-
-            FILTER NOT EXISTS {
-                ?c rdfs:seeAlso ?seealso .
-                FILTER (regex(str(?seealso), "wikipedia.org", "i"))  
-            } .
-        }
-        """
-    results = g.query(q_no_wikipedia_all, initNs=ns)
-    no_wikipedia = []
-    for r in results:
-        no_wikipedia.append({"term": r["term"], "class": r["c"]})
-
-    if len(no_wikipedia) > 5:
-        no_wikipedia = random.sample(no_wikipedia, 5)
+    # #########
+    # q_no_wikipedia_all = """
+    #     SELECT ?c ?term WHERE {
+    #         ?c rdfs:subClassOf+ edam:topic_0003 ;
+    #             rdfs:label ?term .
+    #
+    #         FILTER NOT EXISTS {
+    #             ?c rdfs:seeAlso ?seealso .
+    #             FILTER (regex(str(?seealso), "wikipedia.org", "i"))
+    #         } .
+    #     }
+    #     """
+    # results = g.query(q_no_wikipedia_all, initNs=ns)
+    # no_wikipedia = []
+    # for r in results:
+    #     no_wikipedia.append({"term": r["term"], "class": r["c"]})
+    #
+    # if len(no_wikipedia) > 5:
+    #     no_wikipedia = random.sample(no_wikipedia, 5)
 
     return render_template('quick_curation.html',
-                           count_no_wikipedia = count_no_wikipedia,
-                           missing_wikipedia = no_wikipedia)
+                           #count_no_wikipedia = count_no_wikipedia,
+                           no_wikipedia_link_topic = no_wikipedia_link_topic,
+                           no_wikipedia_link_operation = no_wikipedia_link_operation,
+                           no_broad_synonym_topic = no_broad_synonym_topic,
+                           no_definition_topic = no_definition_topic,
+                           no_regex_identifier = no_regex_identifier,
+                           random = random)
 
 
 if __name__ == "__main__":
