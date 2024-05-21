@@ -6,9 +6,9 @@
 
 {% block body %}
 
-<h1 class="title">Finding quick-to-solve curation needs</h1>
+<h1 class="title">Quick and easy tasks</h1>
 
-    <p> Each section displays up to 8 randomly-picked terms. Refreshing the page will allow to display a new selection. </p>
+    <p> . </p>
 
 <section class="section">
     <h2 class="subtitle"> <span class="tag is-warning is-medium">{{ no_wikipedia_link_topic|length }} </span> EDAM topics with missing wikipedia
@@ -58,14 +58,6 @@
     </div>
 </section>
 
-<section class="section">
-    <h2 class="subtitle"> <span class="tag is-warning is-medium">{{ no_regex_identifier|length }} </span> EDAM hybrid identifiers with missing regex. </h2>
-    <div class="buttons">
-        {% for item in random.sample(no_regex_identifier, 8) %}
-            <a href="{{ item.class }}" class="button is-outlined is-warning " target="_blank" >{{ item.term }}</a>
-        {% endfor %}
-    </div>
-</section>
 
 {#    <h2 class="subtitle"> <span class="tag">17 </span> EDAM topics with no synonyms. </h2>
     <div class="buttons">
