@@ -6,7 +6,7 @@
 
 {% block body %}
 
-<h1 class="title">Welcome to the EDAM ontology dashboard</h1>
+<h1 class="title">Welcome to the EDAM Control Room</h1>
 
 <section class="section">
 
@@ -25,8 +25,12 @@
                     </p>
 
                     <p>
-                        The purpose of this dashboard is to facilitate collaborative efforts towards the improvement of the EDAM ontology,
+                        The purpose of the control room is to facilitate collaborative efforts towards the improvement of the EDAM ontology,
                         by identifying gaps in the current version and providing an interface for their easy integration.
+                    </p>
+
+                    <p>
+                        <button class="button is-link is-outlined"><a href="https://edamontology.github.io/edam-browser/" target="_blank"> Browse the ontology</a></button>
                     </p>
                 </div>
             </div>
@@ -77,54 +81,6 @@
                 <div class="content">
                     <p class="heading"><a href="https://edamontology.org/format" class="button" target="_blank" style="width: 150px; color:white;background-color: coral">Formats</a></p>
                     <p class="title">{{ formats }}</p>
-                </div>
-            </div>
-        </div>
-
-    </nav>
-</section>
-
-<section class="section">
-    <h2 class="subtitle">From the last stable release (display number/date)</h2>
-
-    <nav class="level is-mobile">
-
-        <div class="card has-text-centered">
-            <div class="card-content">
-                <div class="content">
-                    <p class="heading">
-                        <a href="https://edamontology.org/topic" class="button" target="_blank" style="width: 150px; background-color:white;color: forestgreen; border: 2px solid forestgreen">Topics</a></p>
-                    <p class="title">{{ new_topics }}</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="card has-text-centered">
-            <div class="card-content">
-                <div class="content">
-                    <p class="heading">
-                        <a href="https://edamontology.org/operation" class="button" target="_blank" style="width: 150px; background-color:white;color: steelblue; border: 2px solid steelblue">Operations</a></p>
-                    <p class="title">{{ new_operations }}</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="card has-text-centered">
-            <div class="card-content">
-                <div class="content">
-                    <p class="heading">
-                        <a href="https://edamontology.org/data" class="button" target="_blank" style="width: 150px; background-color:white;color: indianred; border: 2px solid indianred">Data</a></p>
-                    <p class="title">{{ new_data }}</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="card has-text-centered">
-            <div class="card-content">
-                <div class="content">
-                    <p class="heading">
-                        <a href="https://edamontology.org/format" class="button" target="_blank" style="width: 150px; background-color:white;color: coral; border: 2px solid coral">Formats</a></p>
-                    <p class="title">{{ new_formats }}</p>
                 </div>
             </div>
         </div>
