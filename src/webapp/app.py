@@ -51,7 +51,7 @@ def index():
                            new_formats=res['nb_formats'] - res_last['nb_formats']
                            )
 
-@app.route('/current_panorama')
+@app.route('/current')
 def current():
     res = get_edam_numbers(g)
 
@@ -62,16 +62,16 @@ def current():
                            formats=res['nb_formats']
                            )
 
-@app.route('/expert_curation')
-def expert_curation():
-    # 1. select a topic
-    # 2. select topic-specific curation actions (subclasses of the identified topic)
-    return render_template('expert_curation.html')
-@app.route('/hot_topic')
-def hot_topic():
-    # 1. select a topic
-    # 2. select topic-specific curation actions (subclasses of the identified topic)
-    return render_template('hot_topic.html')
+@app.route('/quality')
+def quality():
+    res = get_edam_numbers(g)
+
+    return render_template('quality.html',
+                           topics=res['nb_topics'],
+                           operations=res['nb_operations'],
+                           data=res['nb_data'],
+                           formats=res['nb_formats']
+                           )
 
 def get_edam_numbers(g):
     query_op = """
@@ -156,6 +156,11 @@ def edam_last_report():
 
     return render_template('edam_last_report.html', output_edamci_list=edamci_output_list, robot_output_list=robot_output_list)
 
+@app.route('/high_priority')
+def high_priority():
+
+    return render_template('high_priority.html')
+
 @app.route('/quick_curation')
 def quick_curation():
 
@@ -205,16 +210,6 @@ def quick_curation():
     for r in results:
         no_definition_topic.append({"term": r["term"], "class": r["concept"]})
 
-    ## Get identifiers (hybrid) without a regex (WARNING)
-    query = dir_queries + "/no_regex_identifier.rq"
-    with open(query, "r") as f:
-        query = f.read()
-        results = g.query(query)
-    f.close()
-
-    no_regex_identifier = []
-    for r in results:
-        no_regex_identifier.append({"term": r["term"], "class": r["concept"]})
 
     # NO wikipedia
     # q_no_wikipedia = """
@@ -260,8 +255,28 @@ def quick_curation():
                            no_wikipedia_link_operation = no_wikipedia_link_operation,
                            no_broad_synonym_topic = no_broad_synonym_topic,
                            no_definition_topic = no_definition_topic,
+                           #no_regex_identifier = no_regex_identifier,
+                           random = random)
+
+@app.route('/field_specific')
+def field_specific():
+    dir_queries = "./queries"
+    ## Get identifiers (hybrid) without a regex (WARNING)
+    query = dir_queries + "/no_regex_identifier.rq"
+    with open(query, "r") as f:
+        query = f.read()
+        results = g.query(query)
+    f.close()
+
+    no_regex_identifier = []
+    for r in results:
+        no_regex_identifier.append({"term": r["term"], "class": r["concept"]})
+
+
+    return render_template('field_specific.html',
                            no_regex_identifier = no_regex_identifier,
                            random = random)
+
 
 
 if __name__ == "__main__":
