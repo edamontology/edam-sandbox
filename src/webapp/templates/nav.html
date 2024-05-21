@@ -3,25 +3,26 @@
 
     <ul class="menu-list">
         <li><a href="{{ url_for('index') }}">Home</a></li>
-        <li><a href="{{ url_for('current') }}">Current panorama</a></li>
+        <li><a href="{{ url_for('current') }}">Overview</a></li>
+        <li><a href="{{ url_for('quality') }}">Quality report</a></li>
     </ul>
-    <p class="menu-label">I'm a contributor</p>
+    <p class="menu-label">How to contribute</p>
     <ul class="menu-list">
-        <li><a href="{{ url_for('quick_curation') }}">Quick curation</a></li>
-        <li><a href="{{ url_for('expert_curation') }}">In my field</a></li>
-        <li><a href="{{ url_for('hot_topic') }}">Hot topics <span class="tag is-success is-light is-small">4</span></a></li>
+        <li><a href="{{ url_for('high_priority') }}">High priority</a></li>
+        <li><a href="{{ url_for('quick_curation') }}">Quick & easy</a></li>
+        <li><a href="{{ url_for('field_specific') }}">Field specific</a></li>
     </ul>
-    <p class="menu-label">I'm a developer</p>
 
-    <ul class="menu-list">
+    <!-- <p class="menu-label">I'm a developer</p> -->
+    <!-- <ul class="menu-list"> -->
 <!--        <li><a href="{{ url_for('edam_stats') }}">Statistics</a></li>-->
 <!--        <li><a href="{{ url_for('edam_validation') }}">Online validation</a></li>-->
-        <li><a href="https://github.com/edamontology/edamontology/pulls">Pending pull requests <span class="tag is-danger is-light is-small">34</span></a></li>
-        <li><a href="https://github.com/edamontology/edamontology/issues">Pending issues <span class="tag is-danger is-light is-small">198</span></a></li>
-        <li><a>Add new term</a></li>
-        <li><a href="{{ url_for('edam_last_report') }}">Last validation report</a></li>
+        <!-- <li><a href="https://github.com/edamontology/edamontology/pulls">Pending pull requests <span class="tag is-danger is-light is-small">34</span></a></li> -->
+        <!-- <li><a href="https://github.com/edamontology/edamontology/issues">Pending issues <span class="tag is-danger is-light is-small">198</span></a></li> -->
+        <!-- <li><a>Add new term</a></li> -->
+        <!-- <li><a href="{{ url_for('edam_last_report') }}">Last validation report</a></li> -->
+    <!-- </ul> -->
 
-    </ul>
 </aside>
 
 
