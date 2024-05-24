@@ -156,15 +156,71 @@ def edam_last_report():
 
     return render_template('edam_last_report.html', output_edamci_list=edamci_output_list, robot_output_list=robot_output_list)
 
+#################################################
+# How to contribute
+#################################################
 @app.route('/high_priority')
 def high_priority():
+    dir_queries = "./queries"
 
-    return render_template('high_priority.html')
+    ## Checks that all mandatory properties are filled in.
+    query = dir_queries + "/mandatory_property_missing.rq"
+    with open(query, "r") as f:
+        query = f.read()
+        results = g.query(query)
+    f.close()
 
+    mandatory_property_missing = []
+    for r in results:
+        mandatory_property_missing.append({"term": r["label"], "class": r["entity"]})
+
+    ## Checks that all IDs have a unique number.
+    query = dir_queries + "/get_uri.rq"
+    with open(query, "r") as f:
+        query = f.read()
+        results = g.query(query)
+    f.close()
+
+    id_unique = []
+    for r in results:
+        id_unique.append({"term": r["label"], "class": r["entity"]})
+
+    return render_template('high_priority.html',
+                            mandatory_property_missing = mandatory_property_missing,
+                            id_unique = id_unique,
+                            random = random)
+
+####################################
 @app.route('/quick_curation')
 def quick_curation():
 
     dir_queries = "./queries"
+
+    ## Checks that all webpage and doi are declared as literal links.
+    query = dir_queries + "/literal_links.rq"
+    with open(query, "r") as f:
+        query = f.read()
+        results = g.query(query)
+    f.close()
+
+    literal_links = []
+    for r in results:
+        literal_links.append({"term": r["label"], "class": r["entity"]})
+
+    ## Formatting of def and labels 
+    # end_dot_def_missing.rq;end_dot_label.rq;end_space_annotation.rq;eol_in_annotation.rq;start_space_annotation.rq;tab_in_annotation.rq
+    queries = [ dir_queries + "/end_dot_def_missing.rq", dir_queries + "/end_dot_label.rq", dir_queries + "/end_space_annotation.rq", dir_queries + "/eol_in_annotation.rq", 
+               dir_queries + "/start_space_annotation.rq", dir_queries + "/tab_in_annotation.rq"]
+    results = {}
+    for q in queries:
+        with open(q, "r") as f:
+            q = f.read()
+            results.update(g.query(q))
+        f.close()
+
+    formatting = []
+    for r in results:
+        formatting.append({"term": r["label"], "class": r["entity"]})
 
     ## Get topics without a wikipedia link (WARNING)
     query = dir_queries + "/no_wikipedia_link_topic.rq"
@@ -177,38 +233,38 @@ def quick_curation():
     for r in results:
         no_wikipedia_link_topic.append({"term": r["term"], "class": r["concept"]})
 
-    ## Get operations without a wikipedia link (WARNING)
-    query = dir_queries + "/no_wikipedia_link_operation.rq"
-    with open(query, "r") as f:
-        query = f.read()
-        results = g.query(query)
-    f.close()
+    # ## Get operations without a wikipedia link (WARNING)
+    # query = dir_queries + "/no_wikipedia_link_operation.rq"
+    # with open(query, "r") as f:
+    #     query = f.read()
+    #     results = g.query(query)
+    # f.close()
 
-    no_wikipedia_link_operation = []
-    for r in results:
-        no_wikipedia_link_operation.append({"term": r["term"], "class": r["concept"]})
+    # no_wikipedia_link_operation = []
+    # for r in results:
+    #     no_wikipedia_link_operation.append({"term": r["term"], "class": r["concept"]})
 
-    ## Get topics without any broad synonym (OPTIONAL)
-    query = dir_queries + "/no_broad_synonym_topic.rq"
-    with open(query, "r") as f:
-        query = f.read()
-        results = g.query(query)
-    f.close()
+    # ## Get topics without any broad synonym (OPTIONAL)
+    # query = dir_queries + "/no_broad_synonym_topic.rq"
+    # with open(query, "r") as f:
+    #     query = f.read()
+    #     results = g.query(query)
+    # f.close()
 
-    no_broad_synonym_topic = []
-    for r in results:
-        no_broad_synonym_topic.append({"term": r["term"], "class": r["concept"]})
+    # no_broad_synonym_topic = []
+    # for r in results:
+    #     no_broad_synonym_topic.append({"term": r["term"], "class": r["concept"]})
 
-    ## Get topics without a definition (ERROR)
-    query = dir_queries + "/no_definition_topic.rq"
-    with open(query, "r") as f:
-        query = f.read()
-        results = g.query(query)
-    f.close()
+    # ## Get topics without a definition (ERROR)
+    # query = dir_queries + "/no_definition_topic.rq"
+    # with open(query, "r") as f:
+    #     query = f.read()
+    #     results = g.query(query)
+    # f.close()
 
-    no_definition_topic = []
-    for r in results:
-        no_definition_topic.append({"term": r["term"], "class": r["concept"]})
+    # no_definition_topic = []
+    # for r in results:
+    #     no_definition_topic.append({"term": r["term"], "class": r["concept"]})
 
 
     # NO wikipedia
@@ -252,12 +308,11 @@ def quick_curation():
     return render_template('quick_curation.html',
                            #count_no_wikipedia = count_no_wikipedia,
                            no_wikipedia_link_topic = no_wikipedia_link_topic,
-                           no_wikipedia_link_operation = no_wikipedia_link_operation,
-                           no_broad_synonym_topic = no_broad_synonym_topic,
-                           no_definition_topic = no_definition_topic,
-                           #no_regex_identifier = no_regex_identifier,
+                           literal_links = literal_links,
+                           formatting = formatting,
                            random = random)
 
+##############################################
 @app.route('/field_specific')
 def field_specific():
     dir_queries = "./queries"

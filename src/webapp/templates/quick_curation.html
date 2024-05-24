@@ -11,69 +11,52 @@
     <p> . </p>
 
 <section class="section">
-    <h2 class="subtitle"> <span class="tag is-warning is-medium">{{ no_wikipedia_link_topic|length }} </span> EDAM topics with missing wikipedia
+    <h2 class="subtitle"> <span class="tag is-primary is-medium">{{ no_wikipedia_link_topic|length }} </span> EDAM topics with missing wikipedia
         links. </h2>
     <div class="buttons">
-        {% for item in random.sample(no_wikipedia_link_operation, 8) %}
-{#        {% for item in no_wikipedia_link_topic %}#}
-        <a href="{{ item.class }}" class="button is-outlined is-warning " target="_blank" >{{ item.term }}</a>
-        {% endfor %}
-    </div>
-</section>
-
-<section class="section">
-    <h2 class="subtitle"> <span class="tag is-warning is-medium">{{ no_wikipedia_link_operation|length }} </span> EDAM operations with missing wikipedia
-        links. </h2>
-    <div class="buttons">
-        {% for item in random.sample(no_wikipedia_link_operation, 8) %}
-{#        {% for item in no_wikipedia_link_operation %}#}
-        <a href="{{ item.class }}" class="button is-outlined is-warning " target="_blank" >{{ item.term }}</a>
-        {% endfor %}
-    </div>
-
-</section>
-
-<section class="section">
-    <h2 class="subtitle"> <span class="tag is-success is-medium">{{ no_broad_synonym_topic|length }} </span> EDAM topics with no broad synonyms. </h2>
-    <div class="buttons">
-        {% for item in random.sample(no_broad_synonym_topic, 8) %}
-{#        {% for item in no_wikipedia_link_operation %}#}
-        <a href="{{ item.class }}" class="button is-outlined is-success " target="_blank" >{{ item.term }}</a>
-        {% endfor %}
-    </div>
-</section>
-
-<section class="section">
-    <h2 class="subtitle"> <span class="tag is-danger is-medium">{{ no_definition_topic|length }} </span> EDAM topics with no definition. </h2>
-    <div class="buttons">
-        {% if no_definition_topic|length < 8 %}
-            {% for item in no_definition_topic %}
-                <a href="{{ item.class }}" class="button is-outlined is-danger " target="_blank" >{{ item.term }}</a>
+        {% if no_wikipedia_link_topic|length < 8 %}
+            {% for item in no_wikipedia_link_topic %}
+            <a href="https://edamontology.github.io/edam-browser/edit.html?term={{ item.class }}&branch=edam" class="button is-outlined is-primary " target="_blank" >{{ item.term }}</a>
             {% endfor %}
         {% else %}
-            {% for item in random.sample(no_broad_synonym_topic, 8) %}
-                <a href="{{ item.class }}" class="button is-outlined is-danger " target="_blank" >{{ item.term }}</a>
+            {% for item in random.sample(no_wikipedia_link_topic, 8) %}
+            <a href="https://edamontology.github.io/edam-browser/edit.html?term={{ item.class }}&branch=edam" class="button is-outlined is-primary " target="_blank" >{{ item.term }}</a>
             {% endfor %}
         {% endif %}
     </div>
 </section>
 
 
-{#    <h2 class="subtitle"> <span class="tag">17 </span> EDAM topics with no synonyms. </h2>
+<section class="section">
+    <h2 class="subtitle"> <span class="tag is-primary is-medium">{{ literal_links|length }} </span> EDAM concepts have webpage and/or DOI not declared as literal links </h2>
     <div class="buttons">
-        <a href="{{ url_for('quick_curation') }}" class="button" target="_blank" style="border-color:forestgreen;color:forestgreen;background-color: #BBFFCC">Topic A</a>
-        <a href="{{ url_for('quick_curation') }}" class="button" target="_blank" style="border-color:forestgreen;color:forestgreen;background-color: #BBFFCC">Topic B</a>
-        <a href="{{ url_for('quick_curation') }}" class="button" target="_blank" style="border-color:forestgreen;color:forestgreen;background-color: #BBFFCC">Topic C</a>
+        {% if literal_links|length < 8 %}
+            {% for item in literal_links %}
+            <a href="https://edamontology.github.io/edam-browser/edit.html?term={{ item.class }}&branch=edam" class="button is-outlined is-primary " target="_blank" >{{ item.term }}</a>
+            {% endfor %}
+        {% else %}
+            {% for item in random.sample(literal_links, 8) %}
+            <a href="https://edamontology.github.io/edam-browser/edit.html?term={{ item.class }}&branch=edam" class="button is-outlined is-primary " target="_blank" >{{ item.term }}</a>
+            {% endfor %}
+        {% endif %}
     </div>
 
-    <h2 class="subtitle"> <span class="tag">123 </span> EDAM operations with missing input attribute(s). </h2>
-    <div class="content">
-        <a href="{{ url_for('quick_curation') }}" class="button" target="_blank" style="border-color:indianred;color:indianred;background-color: #FFCCDD">Operation X</a>
-        <a href="{{ url_for('quick_curation') }}" class="button" target="_blank" style="border-color:indianred;color:indianred;background-color: #FFCCDD">Operation Y</a>
-        <a href="{{ url_for('quick_curation') }}" class="button" target="_blank" style="border-color:indianred;color:indianred;background-color: #FFCCDD">Operation Z</a>
+</section>
 
-    </div>#}
-
-
+<section class="section">
+    <h2 class="subtitle"> <span class="tag is-primary is-medium">{{ formatting|length }} </span> Formatting </h2>
+        EDAM concepts that could use some proper formatting: labels and definitions starting with capital letters, definitions ending with a full stop, and no additional spaces at the beginning or end of any field. 
+    <div class="buttons">
+        {% if formatting|length < 8 %}
+            {% for item in formatting %}
+            <a href="https://edamontology.github.io/edam-browser/edit.html?term={{ item.class }}&branch=edam" class="button is-outlined is-primary " target="_blank" >{{ item.term }}</a>
+            {% endfor %}
+        {% else %}
+            {% for item in random.sample(formatting, 8) %}
+            <a href="https://edamontology.github.io/edam-browser/edit.html?term={{ item.class }}&branch=edam" class="button is-outlined is-primary " target="_blank" >{{ item.term }}</a>
+            {% endfor %}
+        {% endif %}
+    </div>
+</section>
 
 {% endblock %}
