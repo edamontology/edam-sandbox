@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+{% include 'nav.html' %}
+{% endblock %}
+
+{% block body %}
+
+<h1 class="title">Field specific contributions</h1>
+
+    <section class="section">
+        <h2 class="subtitle"> <span class="tag is-info is-medium">{{ no_regex_identifier|length }} </span> EDAM hybrid identifiers with missing regex. </h2>
+        <div class="buttons">
+            {% for item in random.sample(no_regex_identifier, 8) %}
+                <a href="https://edamontology.github.io/edam-browser/edit.html?term={{ item.class }}&branch=edam" class="button is-outlined is-info " target="_blank" >{{ item.term }}</a>
+            {% endfor %}
+        </div>
+    </section>
+
+
+
+
+{% endblock %}

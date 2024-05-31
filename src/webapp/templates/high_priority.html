@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+{% include 'nav.html' %}
+{% endblock %}
+
+{% block body %}
+
+<h1 class="title">High priority</h1>
+
+<section class="section">
+    <h2 class="subtitle"> <span class="tag is-danger is-medium">{{ mandatory_property_missing|length }} </span> Concepts with missing mandatory properties. </h2>
+    <div class="buttons">
+        {% if mandatory_property_missing|length < 8 %}
+            {% for item in mandatory_property_missing %}
+                <a href="https://edamontology.github.io/edam-browser/edit.html?term={{ item.class }}&branch=edam" class="button is-outlined is-danger " target="_blank" >{{ item.term }}</a>
+            {% endfor %}
+        {% else %}
+            {% for item in random.sample(mandatory_property_missing, 8) %}
+                <a href="https://edamontology.github.io/edam-browser/edit.html?term={{ item.class }}&branch=edam" class="button is-outlined is-danger " target="_blank" >{{ item.term }}</a>
+            {% endfor %}
+        {% endif %}
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="subtitle"> <span class="tag is-danger is-medium">{{ mandatory_property_missing|length }} </span> ID numbers that are no unique. </h2>
+    <div class="buttons">
+        {% if id_unique|length < 8 %}
+            {% for item in id_unique %}
+                <a href="https://edamontology.github.io/edam-browser/edit.html?term={{ item.class }}&branch=edam" class="button is-outlined is-danger " target="_blank" >{{ item.term }}</a>
+            {% endfor %}
+        {% else %}
+            {% for item in random.sample(id_unique, 8) %}
+                <a href="https://edamontology.github.io/edam-browser/edit.html?term={{ item.class }}&branch=edam" class="button is-outlined is-danger " target="_blank" >{{ item.term }}</a>
+            {% endfor %}
+        {% endif %}
+    </div>
+</section>
+
+
+
+{% endblock %}

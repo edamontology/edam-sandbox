@@ -1,0 +1,13 @@
+## Get topics that don't have a wikipedia link as a 'seeAlso' attribute
+
+PREFIX edam: <http://edamontology.org/>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT ?term ?concept WHERE {
+    ?concept rdfs:subClassOf+ edam:topic_0003 ;
+                rdfs:label ?term .
+        FILTER NOT EXISTS {
+        ?concept rdfs:seeAlso ?seealso .
+        FILTER (regex(str(?seealso), "wikipedia.org", "i"))
+       } .
+}
