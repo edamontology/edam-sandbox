@@ -1,3 +1,12 @@
+"""
+edamdiff.py
+Author: Alban Gaignard
+Email: alban.gaignard@univ-nantes.fr
+Date: 2023-05-31
+Description: This script compares two RDF files and outputs the differences.
+
+The MIT License (MIT)
+"""
 
 from rdflib import ConjunctiveGraph
 from rdflib.compare import to_isomorphic, graph_diff, to_canonical_graph
