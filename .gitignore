@@ -1,6 +1,8 @@
 cy_test/__pycache__/*
-.ipynb_checkpoints
+**/.ipynb_checkpoints
 **/.idea
+**/.lprof
+**/.vscode
 **/.pytest*
 **/__pycache__
 
